@@ -1,0 +1,180 @@
+[
+  {
+    "id": "alien-motion-tracker",
+    "title": "Motion Tracker",
+    "subtitle": "Sci-Fi Bewegungssensor im Retro-Style",
+    "status": "stable",
+    "tags": ["tracker", "scanner", "retro", "sensor"],
+    "shortDescription": "Ein immersiver Bewegungssensor-Display im 80er-Jahre Sci-Fi Style mit CRT-Effekten, Radar-Anzeige und echtem Schrittsensor.",
+    "longDescription": "Der Motion Tracker verwandelt dein Smartphone in ein authentisches Sci-Fi-Requisit. Mit animiertem Radar-Sweep, bis zu 8 gleichzeitigen Kontakt-Blips und echten CRT-Röhreneffekten wie Scanlines und Phosphor-Flicker. Besonderes Feature: Die App nutzt den Schrittsensor deines Geräts – wenn du weggehst, erhöht sich die Distanz zu den simulierten Kontakten. Perfekt für immersives Roleplay!",
+    "features": [
+      "Animierter 120° Radar-Sweep mit Fanning-Effekt",
+      "Bis zu 8 gleichzeitige Kontakt-Blips mit Ping/Decay-Verhalten",
+      "Authentische CRT-Effekte: Scanlines, Vertical Drift, Phosphor-Flicker",
+      "Echter Schrittsensor: Gehen erhöht Distanz zu Kontakten",
+      "Kompass-Integration für richtungsbasierte Anzeige",
+      "Haptisches Feedback bei jedem Schritt",
+      "Show-Mode für Vollbild-Präsentation",
+      "Einstellbare Effekte und Kontaktanzahl"
+    ],
+    "howToUse": [
+      "App startet direkt im Show Mode (Vollbild-Tracker)",
+      "Tippe in den Scan-Bereich um einen Kontakt zu platzieren",
+      "Langer Druck: Multi-Kontakt-Modus umschalten",
+      "Langer Druck oben links: Zurück zum Hauptmenü",
+      "Gehe umher – die Schrittzählung beeinflusst die Alien-Distanz"
+    ],
+    "youtube": "",
+    "download": {
+      "type": "external",
+      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "version": "1.0"
+    },
+    "credits": "Inspiriert von klassischen Sci-Fi Filmen der 80er Jahre",
+    "disclaimerNotes": "Benötigt Berechtigungen für Schrittzähler und Sensoren",
+    "permissions": ["WAKE_LOCK", "ACTIVITY_RECOGNITION", "VIBRATE"]
+  },
+  {
+    "id": "cyberpunk-hacker",
+    "title": "Cyberpunk Hacker",
+    "subtitle": "Futuristisches Hacking-Terminal",
+    "status": "stable",
+    "tags": ["hacking", "terminal", "cyberpunk", "console"],
+    "shortDescription": "Ein immersives Hacking-Terminal mit Matrix-Eingabe, Konsolen-Modus und 6 Cyberpunk-Farbthemen. Perfekt für Tech-Cosplays.",
+    "longDescription": "Cyberpunk Hacker simuliert ein futuristisches Hacking-Interface mit zwei Eingabemodi: Der Matrix-Modus bietet ein 4x5 Hex-Token-Grid zur Code-Eingabe, während der Konsolen-Modus eine vollständige Terminal-Oberfläche mit Quick-Commands bietet. Besonderes Feature: Deterministische Ausgabe – die gleiche Eingabe erzeugt immer das gleiche Ergebnis, perfekt für eingeübte Live-Demos!",
+    "features": [
+      "Matrix-Modus: 4x5 Hex-Token Grid mit 6-Token Buffer",
+      "Konsolen-Modus: Custom Keyboard mit Quick-Commands",
+      "Deterministische Ausgabe (SHA-256 seeded) für wiederholbare Demos",
+      "6 Farbthemen: Matrix, ICE, Daemon, Solar, Neon, Azure",
+      "Scanlines, Glitch-Effekte und Grid-Overlays",
+      "Mehrstufige Hack-Simulation (Init, Scan, Bypass, Decrypt, Inject)",
+      "Vollbild Show-Mode ohne UI-Störungen",
+      "Screen bleibt während Show-Mode aktiv"
+    ],
+    "howToUse": [
+      "App startet im Show Mode",
+      "Matrix: Tippe Tokens um den Buffer zu füllen → Output wird generiert",
+      "Console: Tippe Commands oder nutze Quick-Buttons (SCAN, PROBE, INJECT...)",
+      "MENU-Button oben rechts für Farbauswahl und Navigation",
+      "Gleiche Eingabe = Gleiche Ausgabe für einstudierte Präsentationen"
+    ],
+    "youtube": "",
+    "download": {
+      "type": "external",
+      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "version": "1.0"
+    },
+    "credits": "Inspiriert von Cyberpunk-Ästhetik und Retro-Terminals",
+    "disclaimerNotes": "Reine Simulation ohne echte Netzwerkfunktionen",
+    "permissions": ["WAKE_LOCK"]
+  },
+  {
+    "id": "nod-ops-device",
+    "title": "NOD OPS Field Device",
+    "subtitle": "Taktisches Mehrzweck-Interface",
+    "status": "stable",
+    "tags": ["tactical", "military", "scanner", "hacking", "multi-mode"],
+    "shortDescription": "Ein militärisch anmutendes Taktik-Device mit drei Modi: OPS (Tactical Uplink), SCAN (Field Scanner) und INFIL (Infiltration Console).",
+    "longDescription": "Das NOD OPS Field Device ist ein vielseitiges Prop-Interface im dunklen Militär-Style mit rot/schwarz-Ästhetik. Drei spezialisierte Modi bieten unterschiedliche Funktionen: OPS zeigt ein taktisches Grid mit Kontakten und Befehlen, SCAN ermöglicht Radar-basierte Umgebungsanalyse, und INFIL präsentiert ein Cyberpunk-artiges Infiltrations-Terminal. Alle Modi nutzen einen deterministischen Engine für konsistentes Verhalten.",
+    "features": [
+      "3 Modi: OPS (Tactical), SCAN (Radar), INFIL (Hacking)",
+      "OPS: Taktisches Grid, Kontakt-Marker, Event-Log, Commands",
+      "SCAN: Radar-Sweep, Material-Analyse, Risk Assessment",
+      "INFIL: Token-Matrix, Progress-Bars, Access-Level System",
+      "CRT-Effekte: Drift, Scanlines, Phosphor-Flicker, Glitch",
+      "Auto-Demo Mode: Automatischer Modus-Wechsel alle 15 Sekunden",
+      "3 Farbthemen: Red, Red+Green, Red+Cyan",
+      "Einstellbare Animationsgeschwindigkeit"
+    ],
+    "howToUse": [
+      "Hauptmenü: ENTER SHOW MODE für Vollbild-Präsentation",
+      "Tab-Leiste unten wechselt zwischen OPS, SCAN und INFIL",
+      "Tippe auf Grid/Radar/Matrix für Interaktion",
+      "Langer Druck unten rechts (2 Sek.): Show Mode beenden",
+      "Settings: Auto-Demo, Sounds, Haptics, CRT-Effekte anpassen"
+    ],
+    "youtube": "",
+    "download": {
+      "type": "external",
+      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "version": "1.0"
+    },
+    "credits": "Inspiriert von militärischer Sci-Fi Ästhetik",
+    "disclaimerNotes": "Kein offizielles Produkt, reines Fan-Projekt",
+    "permissions": ["VIBRATE"]
+  },
+  {
+    "id": "predator-countdown",
+    "title": "Predator Countdown",
+    "subtitle": "Alien-Style Countdown Timer mit Live Wallpaper",
+    "status": "stable",
+    "tags": ["timer", "countdown", "wallpaper", "alarm"],
+    "shortDescription": "Ein Countdown-Timer mit außerirdischen 10-Segment-Ziffern, Glow-Effekten und Live-Wallpaper Funktion. Inklusive Wecker mit Sound-Effekten.",
+    "longDescription": "Der Predator Countdown zeigt die Zeit in einzigartigen 10-Segment Alien-Ziffern an – weit weg vom Standard 7-Segment LED-Look. Features wie pulsierender Glow, Glitch-Effekte und CRT-Scanlines sorgen für authentische Sci-Fi Atmosphäre. Die App funktioniert als Countdown zu einer einstellbaren Zielzeit, als normale Uhr, und als animiertes Live Wallpaper. Der integrierte Wecker spielt Sounds mit steigender Intensität ab.",
+    "features": [
+      "Einzigartige 10-Segment Alien-Ziffern (HH:MM:SS)",
+      "Countdown zu einstellbarer Detonationszeit",
+      "Uhr-Modus als Alternative",
+      "Animiertes Live Wallpaper (30 FPS, batterieschonend)",
+      "8 Farbschemas: Red, Orange, Green, Cyan, Blue, Purple, Pink, White",
+      "Wecker mit beschleunigendem Sound-Effekt",
+      "Glitch-Effekte verstärken sich bei Countdown-Ende",
+      "Show Mode mit interaktivem Alien-Button"
+    ],
+    "howToUse": [
+      "Settings: Countdown vs. Uhr-Modus wählen",
+      "Detonationszeit einstellen (00:00 - 23:59)",
+      "Farbschema auswählen",
+      "Show Mode: Tap auf Alien-Button = 10 Sek Countdown",
+      "Show Mode: Drag nach oben = Custom Countdown (30-300 Sek)",
+      "Long-Press = Show Mode beenden",
+      "Als Wallpaper setzen für permanente Anzeige"
+    ],
+    "youtube": "",
+    "download": {
+      "type": "external",
+      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "version": "1.0"
+    },
+    "credits": "Inspiriert von Sci-Fi Film-Ästhetik",
+    "disclaimerNotes": "Wecker-Funktion benötigt Alarm-Berechtigungen. Batterieverbrauch bei Live Wallpaper beachten.",
+    "permissions": ["WAKE_LOCK", "SCHEDULE_EXACT_ALARM", "VIBRATE", "POST_NOTIFICATIONS"]
+  },
+  {
+    "id": "tactical-scanner",
+    "title": "Tactical Scanner",
+    "subtitle": "Boden-Scanner mit 60-Sekunden Deep Scan",
+    "status": "stable",
+    "tags": ["scanner", "tactical", "analysis", "wallpaper"],
+    "shortDescription": "Ein Ground Scanner mit animiertem Radar, 17+ visuellen Layern und progressiver 60-Sekunden Tiefenanalyse mit technischen Readouts.",
+    "longDescription": "Der Tactical Scanner simuliert ein fortschrittliches Bodenanalyse-Gerät mit beeindruckender visueller Präsentation. 17+ Layer erzeugen eine realistische Sci-Fi Ästhetik mit sinusförmigen Wellen, rotierendem Radar-Cone und blinkenden Kontakt-Markern. Das Highlight: Der 60-Sekunden Deep Scan zeigt progressive technische Daten – von Terrain-Analyse über chemische Zusammensetzung bis zu Koordinaten und Anomalie-Erkennung. Alle Daten sind deterministisch: Gleiche Position = Gleiche Ergebnisse.",
+    "features": [
+      "17+ visuelle Layer mit Sci-Fi Ästhetik",
+      "60-Sekunden Deep Scan in 6 Phasen",
+      "Progressive Daten-Enthüllung (Terrain, Chemie, Bio-Marker, Anomalien)",
+      "Deterministische Ausgabe basierend auf Tap-Koordinaten",
+      "Auto-Scan Mode mit automatischer Kontakt-Generierung",
+      "6 Farbschemas: Red, Green, Blue, Amber, Cyan, Mono",
+      "Animiertes Live Wallpaper (30 FPS)",
+      "Sound-Effekte und haptisches Feedback"
+    ],
+    "howToUse": [
+      "App startet direkt im Show Mode",
+      "Tippe irgendwo um 60-Sek Deep Scan zu starten",
+      "Beobachte die progressiven technischen Readouts",
+      "Erneut tippen = Neuen Scan starten (alter wird abgebrochen)",
+      "[X] Button oben links = Hauptmenü",
+      "Settings: Farbe, Geschwindigkeit, Sounds, Auto-Scan anpassen"
+    ],
+    "youtube": "",
+    "download": {
+      "type": "external",
+      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "version": "2.0"
+    },
+    "credits": "Inspiriert von taktischen Sci-Fi Interfaces",
+    "disclaimerNotes": "Komplett offline, keine echte Scan-Funktionalität",
+    "permissions": ["WAKE_LOCK", "VIBRATE"]
+  }
+]
