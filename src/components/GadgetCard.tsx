@@ -1,11 +1,16 @@
+'use client'
+
 import Link from 'next/link'
 import { Gadget } from '@/lib/types'
+import { useTranslations } from '@/lib/i18n'
 
 interface GadgetCardProps {
   gadget: Gadget
 }
 
 export default function GadgetCard({ gadget }: GadgetCardProps) {
+  const t = useTranslations()
+
   return (
     <Link href={`/gadgets/${gadget.id}`}>
       <article className="bg-cyber-darker border border-cyber-accent/20 rounded-lg p-6 card-hover h-full flex flex-col">
@@ -16,7 +21,7 @@ export default function GadgetCard({ gadget }: GadgetCardProps) {
               {gadget.title}
             </h3>
             <span className={`badge shrink-0 ${gadget.status === 'stable' ? 'badge-stable' : 'badge-wip'}`}>
-              {gadget.status === 'stable' ? 'Stable' : 'WIP'}
+              {gadget.status === 'stable' ? t.gadgets.stable : t.gadgets.wip}
             </span>
           </div>
           <p className="text-cyber-blue text-sm">{gadget.subtitle}</p>
@@ -39,7 +44,7 @@ export default function GadgetCard({ gadget }: GadgetCardProps) {
         {/* Footer */}
         <div className="flex items-center justify-between pt-4 border-t border-cyber-accent/10">
           <span className="text-cyber-accent text-sm font-semibold">
-            Details anzeigen →
+            {t.gadgets.showDetails}
           </span>
           {gadget.download.version && (
             <span className="text-gray-500 text-xs">

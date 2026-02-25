@@ -1,6 +1,11 @@
+'use client'
+
 import Link from 'next/link'
+import { useTranslations } from '@/lib/i18n'
 
 export default function Footer() {
+  const t = useTranslations()
+
   return (
     <footer className="bg-cyber-darker border-t border-cyber-accent/20 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -11,28 +16,27 @@ export default function Footer() {
               Cosplay Digital Gadgets
             </h3>
             <p className="text-gray-400 text-sm">
-              Fan-Prop Apps für Conventions, Fotoshoots und Live-Roleplay.
-              Keine offiziellen Produkte.
+              {t.footer.tagline}
             </p>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Links</h4>
+            <h4 className="text-white font-semibold mb-4">{t.footer.links}</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/gadgets" className="text-gray-400 hover:text-cyber-accent transition-colors">
-                  Alle Gadgets
+                  {t.nav.allGadgets}
                 </Link>
               </li>
               <li>
                 <Link href="/support" className="text-gray-400 hover:text-cyber-accent transition-colors">
-                  Support / Spenden
+                  {t.nav.support}
                 </Link>
               </li>
               <li>
                 <Link href="/disclaimer" className="text-gray-400 hover:text-cyber-accent transition-colors">
-                  Disclaimer
+                  {t.nav.disclaimer}
                 </Link>
               </li>
             </ul>
@@ -40,16 +44,16 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Rechtliches</h4>
+            <h4 className="text-white font-semibold mb-4">{t.footer.legal}</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/impressum" className="text-gray-400 hover:text-cyber-accent transition-colors">
-                  Impressum
+                  {t.footer.impressum}
                 </Link>
               </li>
               <li>
                 <Link href="/privacy" className="text-gray-400 hover:text-cyber-accent transition-colors">
-                  Datenschutz
+                  {t.footer.privacy}
                 </Link>
               </li>
             </ul>
@@ -58,8 +62,7 @@ export default function Footer() {
 
         <div className="border-t border-cyber-accent/10 mt-8 pt-8 text-center text-gray-500 text-sm">
           <p>
-            © {new Date().getFullYear()} Cosplay Digital Gadgets.
-            Fan-Projekt, keine offizielle Verbindung zu Rechteinhabern.
+            {t.footer.copyright.replace('{year}', String(new Date().getFullYear()))}
           </p>
         </div>
       </div>

@@ -3,9 +3,12 @@
 import { useState, useMemo } from 'react'
 import { getAllGadgets, getAllTags } from '@/lib/gadgets'
 import GadgetCard from '@/components/GadgetCard'
+import { useLanguage, useTranslations } from '@/lib/i18n'
 
 export default function GadgetsPage() {
-  const allGadgets = getAllGadgets()
+  const { language } = useLanguage()
+  const t = useTranslations()
+  const allGadgets = getAllGadgets(language)
   const allTags = getAllTags()
 
   const [search, setSearch] = useState('')
@@ -64,9 +67,11 @@ export default function GadgetsPage() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2">Alle Gadgets</h1>
+          <h1 className="text-3xl font-bold text-white mb-2">{t.gadgets.title}</h1>
           <p className="text-gray-400">
-            {filteredGadgets.length} von {allGadgets.length} Gadgets
+            {t.gadgets.countOf
+              .replace('{filtered}', String(filteredGadgets.length))
+              .replace('{total}', String(allGadgets.length))}
           </p>
         </div>
 
@@ -76,7 +81,7 @@ export default function GadgetsPage() {
           <div className="mb-6">
             <input
               type="text"
-              placeholder="Suche nach Name, Beschreibung oder Tag..."
+              placeholder={t.gadgets.searchPlaceholder}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full px-4 py-3 bg-cyber-dark border border-cyber-accent/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyber-accent transition-colors"
@@ -85,7 +90,7 @@ export default function GadgetsPage() {
 
           {/* Tags */}
           <div className="mb-6">
-            <label className="block text-gray-400 text-sm mb-2">Tags</label>
+            <label className="block text-gray-400 text-sm mb-2">{t.gadgets.tagsLabel}</label>
             <div className="flex flex-wrap gap-2">
               {allTags.map(tag => (
                 <button
@@ -106,7 +111,7 @@ export default function GadgetsPage() {
           {/* Status & Sort */}
           <div className="flex flex-wrap gap-4">
             <div>
-              <label className="block text-gray-400 text-sm mb-2">Status</label>
+              <label className="block text-gray-400 text-sm mb-2">{t.gadgets.statusLabel}</label>
               <div className="flex gap-2">
                 {(['all', 'stable', 'wip'] as const).map(status => (
                   <button
@@ -118,14 +123,14 @@ export default function GadgetsPage() {
                         : 'bg-cyber-dark border border-cyber-accent/30 text-gray-400 hover:border-cyber-accent'
                     }`}
                   >
-                    {status === 'all' ? 'Alle' : status === 'stable' ? 'Stable' : 'WIP'}
+                    {status === 'all' ? t.gadgets.all : status === 'stable' ? t.gadgets.stable : t.gadgets.wip}
                   </button>
                 ))}
               </div>
             </div>
 
             <div>
-              <label className="block text-gray-400 text-sm mb-2">Sortierung</label>
+              <label className="block text-gray-400 text-sm mb-2">{t.gadgets.sortLabel}</label>
               <div className="flex gap-2">
                 <button
                   onClick={() => setSortBy('title')}
@@ -135,7 +140,7 @@ export default function GadgetsPage() {
                       : 'bg-cyber-dark border border-cyber-accent/30 text-gray-400 hover:border-cyber-accent'
                   }`}
                 >
-                  A-Z
+                  {t.gadgets.sortAZ}
                 </button>
                 <button
                   onClick={() => setSortBy('status')}
@@ -145,7 +150,7 @@ export default function GadgetsPage() {
                       : 'bg-cyber-dark border border-cyber-accent/30 text-gray-400 hover:border-cyber-accent'
                   }`}
                 >
-                  Status
+                  {t.gadgets.sortStatus}
                 </button>
               </div>
             </div>
@@ -161,7 +166,7 @@ export default function GadgetsPage() {
                   }}
                   className="px-4 py-2 text-cyber-red hover:text-red-400 transition-colors text-sm"
                 >
-                  Filter zurücksetzen
+                  {t.gadgets.clearFilters}
                 </button>
               </div>
             )}
@@ -178,7 +183,7 @@ export default function GadgetsPage() {
         ) : (
           <div className="text-center py-16">
             <p className="text-gray-400 text-lg">
-              Keine Gadgets gefunden.
+              {t.gadgets.noResults}
             </p>
             <button
               onClick={() => {
@@ -188,7 +193,7 @@ export default function GadgetsPage() {
               }}
               className="mt-4 text-cyber-accent hover:text-cyber-blue transition-colors"
             >
-              Filter zurücksetzen
+              {t.gadgets.clearFilters}
             </button>
           </div>
         )}

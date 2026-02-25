@@ -1,66 +1,53 @@
-import { Metadata } from 'next'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Datenschutz - Cosplay Digital Gadgets',
-  description: 'Datenschutzerklärung der Cosplay Digital Gadgets Website',
-}
+import { useTranslations } from '@/lib/i18n'
 
 export default function PrivacyPage() {
+  const t = useTranslations()
+
   return (
     <div className="min-h-screen py-12 px-4">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold text-white mb-8">Datenschutzerklärung</h1>
+        <h1 className="text-3xl font-bold text-white mb-8">{t.privacy.title}</h1>
 
         <div className="bg-cyber-blue/10 border border-cyber-blue/30 rounded-lg p-6 mb-8">
           <p className="text-cyber-blue">
-            (Placeholder – Diese Seite muss vor Veröffentlichung mit einer korrekten
-            Datenschutzerklärung befüllt werden)
+            {t.privacy.placeholder}
           </p>
         </div>
 
         <div className="space-y-8">
-          <Section title="1. Verantwortlicher">
-            <p>
-              Verantwortlich für die Datenverarbeitung auf dieser Website ist:
-            </p>
+          <Section title={t.privacy.section1Title}>
+            <p>{t.privacy.section1Text}</p>
             <code className="block mt-4 text-cyber-accent bg-cyber-dark px-4 py-2 rounded font-mono text-sm">
-              [NAME UND KONTAKTDATEN - SIEHE IMPRESSUM]
+              [NAME AND CONTACT DETAILS - SEE LEGAL NOTICE]
             </code>
           </Section>
 
-          <Section title="2. Hosting">
-            <p>
-              Diese Website wird als statische Seite gehostet bei:
-            </p>
+          <Section title={t.privacy.section2Title}>
+            <p>{t.privacy.section2Text}</p>
             <code className="block mt-4 text-cyber-accent bg-cyber-dark px-4 py-2 rounded font-mono text-sm">
-              [HOSTING-ANBIETER, z.B. Vercel, Netlify, GitHub Pages]
+              [HOSTING PROVIDER, e.g. Vercel, Netlify, GitHub Pages]
             </code>
             <p className="mt-4 text-gray-400 text-sm">
-              Der Hosting-Anbieter erhebt ggf. technisch notwendige Daten wie IP-Adressen
-              in Server-Logfiles. Details findest du in der Datenschutzerklärung des Anbieters.
+              {t.privacy.section2Note}
             </p>
           </Section>
 
-          <Section title="3. Cookies und Tracking">
-            <p>
-              Diese Website verwendet:
-            </p>
+          <Section title={t.privacy.section3Title}>
+            <p>{t.privacy.section3Text}</p>
             <ul className="mt-4 space-y-2 text-gray-300">
-              <li>• Keine Tracking-Cookies</li>
-              <li>• Keine Analytics-Dienste</li>
-              <li>• Keine Werbung</li>
+              {t.privacy.section3List.map((item, index) => (
+                <li key={index}>• {item}</li>
+              ))}
             </ul>
             <p className="mt-4 text-gray-400 text-sm">
-              Es werden nur technisch notwendige Cookies verwendet, falls erforderlich.
+              {t.privacy.section3Note}
             </p>
           </Section>
 
-          <Section title="4. Eingebettete Inhalte">
-            <p>
-              Diese Website bindet YouTube-Videos ein. Beim Laden dieser Videos werden
-              Daten an YouTube/Google übertragen. Weitere Informationen findest du in der
-              Datenschutzerklärung von Google:
-            </p>
+          <Section title={t.privacy.section4Title}>
+            <p>{t.privacy.section4Text}</p>
             <a
               href="https://policies.google.com/privacy"
               target="_blank"
@@ -71,29 +58,18 @@ export default function PrivacyPage() {
             </a>
           </Section>
 
-          <Section title="5. Downloads">
-            <p>
-              APK-Downloads werden entweder direkt von dieser Website oder über externe
-              Dienste (z.B. GitHub Releases) bereitgestellt. Bei externen Diensten gelten
-              deren Datenschutzbestimmungen.
-            </p>
+          <Section title={t.privacy.section5Title}>
+            <p>{t.privacy.section5Text}</p>
           </Section>
 
-          <Section title="6. Deine Rechte">
-            <p>
-              Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung
-              der Verarbeitung deiner personenbezogenen Daten. Kontaktiere uns über die
-              im Impressum angegebenen Kontaktdaten.
-            </p>
+          <Section title={t.privacy.section6Title}>
+            <p>{t.privacy.section6Text}</p>
           </Section>
         </div>
 
         <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-lg p-6 mt-8">
-          <h3 className="text-cyber-purple font-bold mb-2">Wichtiger Hinweis:</h3>
           <p className="text-gray-400 text-sm">
-            Diese Vorlage ersetzt keine rechtliche Beratung. Für eine rechtssichere
-            Datenschutzerklärung solltest du einen Datenschutzgenerator nutzen oder
-            rechtliche Beratung in Anspruch nehmen.
+            {t.privacy.legalNote}
           </p>
         </div>
       </div>
