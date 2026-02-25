@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Server mode for Railway/Vercel hosting
+  // Remove 'output: export' to enable next start
   trailingSlash: true,
   images: {
     unoptimized: true,
