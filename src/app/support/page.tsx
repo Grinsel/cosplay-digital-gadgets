@@ -21,35 +21,11 @@ export default function SupportPage() {
 
           <h2 className="text-xl font-bold text-white mb-6">{t.support.optionsTitle}</h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <DonationOption
-              name="Ko-fi"
-              description={t.support.kofiDesc}
-              link="#"
-              color="text-pink-400"
-              linkText={t.support.supportLink}
-              comingSoon={t.support.linkComingSoon}
-            />
-            <DonationOption
-              name="Buy Me a Coffee"
-              description={t.support.bmcDesc}
-              link="#"
-              color="text-yellow-400"
-              linkText={t.support.supportLink}
-              comingSoon={t.support.linkComingSoon}
-            />
-            <DonationOption
-              name="Patreon"
-              description={t.support.patreonDesc}
-              link="#"
-              color="text-orange-400"
-              linkText={t.support.supportLink}
-              comingSoon={t.support.linkComingSoon}
-            />
+          <div className="flex justify-center">
             <DonationOption
               name="PayPal"
               description={t.support.paypalDesc}
-              link="#"
+              link="https://paypal.me/Grinsel"
               color="text-blue-400"
               linkText={t.support.supportLink}
               comingSoon={t.support.linkComingSoon}
