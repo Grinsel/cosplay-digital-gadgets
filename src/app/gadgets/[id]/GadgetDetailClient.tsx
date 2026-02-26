@@ -54,7 +54,7 @@ export default function GadgetDetailClient({ id }: Props) {
           </div>
         </header>
 
-        {/* YouTube Video */}
+        {/* YouTube Video (Shorts format 9:16) */}
         {gadget.youtube && (() => {
           let videoId = gadget.youtube
           if (gadget.youtube.includes('youtube.com')) {
@@ -69,14 +69,16 @@ export default function GadgetDetailClient({ id }: Props) {
           }
           return (
             <section className="mb-8">
-              <div className="aspect-video bg-cyber-darker rounded-lg overflow-hidden border border-cyber-accent/20">
-                <iframe
-                  src={`https://www.youtube.com/embed/${videoId}`}
-                  title={`${gadget.title} Demo`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
+              <div className="flex justify-center">
+                <div className="w-full max-w-sm aspect-[9/16] bg-cyber-darker rounded-lg overflow-hidden border border-cyber-accent/20">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${videoId}`}
+                    title={`${gadget.title} Demo`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
               </div>
             </section>
           )
