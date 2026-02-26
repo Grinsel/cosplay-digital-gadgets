@@ -205,18 +205,18 @@
     "id": "tactical-scanner",
     "title": "Tactical Scanner",
     "subtitle": {
-      "en": "Ground Scanner with 60-Second Deep Scan",
-      "de": "Boden-Scanner mit 60-Sekunden Deep Scan"
+      "en": "Star Wars-Inspired Ground Scanner",
+      "de": "Von Star Wars inspirierter Boden-Scanner"
     },
     "status": "stable",
-    "tags": ["scanner", "tactical", "analysis", "wallpaper"],
+    "tags": ["scanner", "tactical", "analysis", "wallpaper", "star-wars"],
     "shortDescription": {
-      "en": "A ground scanner with animated radar, 17+ visual layers and progressive 60-second deep analysis with technical readouts.",
-      "de": "Ein Ground Scanner mit animiertem Radar, 17+ visuellen Layern und progressiver 60-Sekunden Tiefenanalyse mit technischen Readouts."
+      "en": "A Star Wars-inspired ground scanner with animated radar, 17+ visual layers and progressive 60-second deep analysis with technical readouts.",
+      "de": "Ein von Star Wars inspirierter Ground Scanner mit animiertem Radar, 17+ visuellen Layern und progressiver 60-Sekunden Tiefenanalyse mit technischen Readouts."
     },
     "longDescription": {
-      "en": "The Tactical Scanner simulates an advanced ground analysis device with impressive visual presentation. 17+ layers create a realistic sci-fi aesthetic with sinusoidal waves, rotating radar cone and blinking contact markers. The highlight: The 60-second deep scan shows progressive technical data – from terrain analysis to chemical composition to coordinates and anomaly detection. All data is deterministic: Same position = Same results.",
-      "de": "Der Tactical Scanner simuliert ein fortschrittliches Bodenanalyse-Gerät mit beeindruckender visueller Präsentation. 17+ Layer erzeugen eine realistische Sci-Fi Ästhetik mit sinusförmigen Wellen, rotierendem Radar-Cone und blinkenden Kontakt-Markern. Das Highlight: Der 60-Sekunden Deep Scan zeigt progressive technische Daten – von Terrain-Analyse über chemische Zusammensetzung bis zu Koordinaten und Anomalie-Erkennung. Alle Daten sind deterministisch: Gleiche Position = Gleiche Ergebnisse."
+      "en": "The Tactical Scanner simulates an advanced ground analysis device inspired by Star Wars aesthetics. 17+ layers create a realistic sci-fi look with sinusoidal waves, rotating radar cone and blinking contact markers. The highlight: The 60-second deep scan shows progressive technical data – from terrain analysis to chemical composition to coordinates and anomaly detection. All data is deterministic: Same position = Same results.",
+      "de": "Der Tactical Scanner simuliert ein fortschrittliches Bodenanalyse-Gerät im Star Wars-Stil. 17+ Layer erzeugen eine realistische Sci-Fi Ästhetik mit sinusförmigen Wellen, rotierendem Radar-Cone und blinkenden Kontakt-Markern. Das Highlight: Der 60-Sekunden Deep Scan zeigt progressive technische Daten – von Terrain-Analyse über chemische Zusammensetzung bis zu Koordinaten und Anomalie-Erkennung. Alle Daten sind deterministisch: Gleiche Position = Gleiche Ergebnisse."
     },
     "features": [
       { "en": "17+ visual layers with sci-fi aesthetics", "de": "17+ visuelle Layer mit Sci-Fi Ästhetik" },
@@ -236,15 +236,15 @@
       { "en": "[X] button top left = Main menu", "de": "[X] Button oben links = Hauptmenü" },
       { "en": "Settings: Adjust color, speed, sounds, auto-scan", "de": "Settings: Farbe, Geschwindigkeit, Sounds, Auto-Scan anpassen" }
     ],
-    "youtube": "",
+    "youtube": "BUdlt3MCnNo",
     "download": {
       "type": "external",
       "apkUrl": "[GITHUB_RELEASE_URL]",
       "version": "2.0"
     },
     "credits": {
-      "en": "Inspired by tactical sci-fi interfaces",
-      "de": "Inspiriert von taktischen Sci-Fi Interfaces"
+      "en": "Inspired by Star Wars ground scanner aesthetics",
+      "de": "Inspiriert von Star Wars Boden-Scanner Ästhetik"
     },
     "disclaimerNotes": {
       "en": "Completely offline, no real scan functionality",
