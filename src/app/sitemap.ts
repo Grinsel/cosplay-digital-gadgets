@@ -2,14 +2,14 @@ import { MetadataRoute } from 'next'
 import { getAllGadgetIds } from '@/lib/gadgets'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://grinsel.online/gadgets'
+  const baseUrl = 'https://grinsel.online'
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'monthly',
       priority: 1,
     },
     {
@@ -19,25 +19,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/support`,
+      url: `${baseUrl}/gadgets/ideas`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/gadgets/support`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/disclaimer`,
+      url: `${baseUrl}/gadgets/disclaimer`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/impressum`,
+      url: `${baseUrl}/gadgets/impressum`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/privacy`,
+      url: `${baseUrl}/gadgets/privacy`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.3,

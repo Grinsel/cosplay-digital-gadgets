@@ -1,39 +1,35 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import Providers from '@/components/Providers'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://grinsel.online/gadgets'),
+  metadataBase: new URL('https://grinsel.online'),
   title: {
-    default: 'Cosplay Digital Gadgets',
-    template: '%s | Cosplay Digital Gadgets',
+    default: 'Grinsel - Digital Projects',
+    template: '%s | Grinsel',
   },
-  description: 'Free Android gadget apps for cosplay & roleplay - Motion trackers, scanners, hacking terminals and more. Interactive props for conventions and photoshoots.',
-  keywords: ['cosplay', 'roleplay', 'gadget', 'prop', 'app', 'android', 'convention', 'cosplay apps', 'roleplay gadgets', 'sci-fi props'],
+  description: 'Digital projects by Marc Schmelzer - Apps, tools and creative software',
   authors: [{ name: 'Marc Schmelzer' }],
   creator: 'Marc Schmelzer',
   publisher: 'Grinsel',
+  icons: { icon: '/icon.svg' },
   openGraph: {
-    title: 'Cosplay Digital Gadgets',
-    description: 'Free interactive prop apps for conventions, photoshoots and live roleplay. Motion trackers, scanners, hacking terminals and more.',
-    url: 'https://grinsel.online/gadgets',
-    siteName: 'Cosplay Digital Gadgets',
+    title: 'Grinsel - Digital Projects',
+    description: 'Digital projects by Marc Schmelzer - Apps, tools and creative software',
+    url: 'https://grinsel.online',
+    siteName: 'Grinsel',
+    images: [{ url: '/og_image.png', width: 1200, height: 630 }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cosplay Digital Gadgets',
-    description: 'Free Android gadget apps for cosplay & roleplay',
+    title: 'Grinsel - Digital Projects',
+    description: 'Digital projects by Marc Schmelzer',
+    images: ['/og_image.png'],
   },
   robots: {
     index: true,
     follow: true,
-  },
-  alternates: {
-    canonical: 'https://grinsel.online/gadgets',
   },
 }
 
@@ -44,14 +40,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col">
-        <Providers>
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </Providers>
+      <body className="min-h-screen bg-cyber-dark">
+        {children}
       </body>
     </html>
   )

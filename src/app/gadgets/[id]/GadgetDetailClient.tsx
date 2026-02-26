@@ -30,7 +30,7 @@ export default function GadgetDetailClient({ id }: Props) {
       <div className="max-w-4xl mx-auto">
         {/* Breadcrumb */}
         <nav className="mb-8">
-          <Link href="/gadgets" className="text-cyber-accent hover:text-cyber-blue transition-colors">
+          <Link href="/gadgets/" className="text-cyber-accent hover:text-cyber-blue transition-colors">
             {t.gadgetDetail.backToOverview}
           </Link>
         </nav>

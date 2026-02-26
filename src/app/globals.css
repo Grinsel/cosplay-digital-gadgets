@@ -120,3 +120,10 @@ body {
 .badge-tag {
   @apply bg-purple-900/50 text-purple-400 border border-purple-500/50;
 }
+
+/* Focus States for Accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--cyber-accent);
+  outline-offset: 2px;
+}

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://grinsel.online/gadgets/sitemap.xml',
+    sitemap: 'https://grinsel.online/sitemap.xml',
   }
 }

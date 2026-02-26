@@ -12,7 +12,7 @@ export default function IdeasPage() {
       <div className="max-w-3xl mx-auto">
         {/* Breadcrumb */}
         <nav className="mb-8">
-          <Link href="/" className="text-cyber-accent hover:text-cyber-blue transition-colors">
+          <Link href="/gadgets/" className="text-cyber-accent hover:text-cyber-blue transition-colors">
             ← {t.gadgetDetail.backToOverview}
           </Link>
         </nav>

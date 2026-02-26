@@ -25,17 +25,17 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">{t.footer.links}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/gadgets" className="text-gray-400 hover:text-cyber-accent transition-colors">
+                <Link href="/gadgets/" className="text-gray-400 hover:text-cyber-accent transition-colors">
                   {t.nav.allGadgets}
                 </Link>
               </li>
               <li>
-                <Link href="/support" className="text-gray-400 hover:text-cyber-accent transition-colors">
+                <Link href="/gadgets/support/" className="text-gray-400 hover:text-cyber-accent transition-colors">
                   {t.nav.support}
                 </Link>
               </li>
               <li>
-                <Link href="/disclaimer" className="text-gray-400 hover:text-cyber-accent transition-colors">
+                <Link href="/gadgets/disclaimer/" className="text-gray-400 hover:text-cyber-accent transition-colors">
                   {t.nav.disclaimer}
                 </Link>
               </li>
@@ -47,12 +47,12 @@ export default function Footer() {
             <h4 className="text-white font-semibold mb-4">{t.footer.legal}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/impressum" className="text-gray-400 hover:text-cyber-accent transition-colors">
+                <Link href="/gadgets/impressum/" className="text-gray-400 hover:text-cyber-accent transition-colors">
                   {t.footer.impressum}
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="text-gray-400 hover:text-cyber-accent transition-colors">
+                <Link href="/gadgets/privacy/" className="text-gray-400 hover:text-cyber-accent transition-colors">
                   {t.footer.privacy}
                 </Link>
               </li>

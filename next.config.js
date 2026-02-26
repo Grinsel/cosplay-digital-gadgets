@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Serve under /gadgets subdirectory
-  basePath: '/gadgets',
   trailingSlash: true,
   images: {
     remotePatterns: [
