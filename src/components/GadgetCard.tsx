@@ -8,12 +8,49 @@ interface GadgetCardProps {
   gadget: Gadget
 }
 
+function getVideoId(youtube: string): string {
+  let videoId = youtube
+  if (youtube.includes('youtube.com')) {
+    try {
+      const url = new URL(youtube)
+      if (url.pathname.includes('/shorts/')) {
+        videoId = url.pathname.split('/shorts/')[1]
+      } else {
+        videoId = url.searchParams.get('v') || youtube
+      }
+    } catch {
+      videoId = youtube
+    }
+  } else if (youtube.includes('youtu.be')) {
+    try {
+      videoId = new URL(youtube).pathname.slice(1)
+    } catch {
+      videoId = youtube
+    }
+  }
+  return videoId
+}
+
 export default function GadgetCard({ gadget }: GadgetCardProps) {
   const t = useTranslations()
 
   return (
-    <Link href={`/gadgets/${gadget.id}`}>
-      <article className="bg-cyber-darker border border-cyber-accent/20 rounded-lg p-6 card-hover h-full flex flex-col">
+    <article className="bg-cyber-darker border border-cyber-accent/20 rounded-lg overflow-hidden card-hover h-full flex flex-col">
+      {/* YouTube Short Video */}
+      {gadget.youtube && (
+        <div className="w-full aspect-[9/16] bg-black">
+          <iframe
+            src={`https://www.youtube.com/embed/${getVideoId(gadget.youtube)}`}
+            title={`${gadget.title} Demo`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
+        </div>
+      )}
+
+      {/* Card Content */}
+      <Link href={`/gadgets/${gadget.id}`} className="flex flex-col flex-grow p-6">
         {/* Header */}
         <div className="mb-4">
           <div className="flex items-start justify-between gap-2 mb-2">
@@ -52,7 +89,7 @@ export default function GadgetCard({ gadget }: GadgetCardProps) {
             </span>
           )}
         </div>
-      </article>
-    </Link>
+      </Link>
+    </article>
   )
 }
