@@ -80,7 +80,7 @@ export const en: Translations = {
     kofiDesc: 'One-time or recurring support',
     bmcDesc: 'Quick and easy',
     patreonDesc: 'Monthly support',
-    paypalDesc: 'Alternative payment method',
+    paypalDesc: 'Quick and secure donation',
     linkComingSoon: 'Link coming soon...',
     supportLink: 'Support →',
     otherWaysTitle: 'Other ways to help',
