@@ -15,7 +15,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <span className="text-2xl">📱</span>
+            <span className="text-2xl" role="img" aria-label="Mobile phone">📱</span>
             <span className="text-cyber-accent font-bold text-lg group-hover:text-glow-green transition-all">
               GADGETS
             </span>
@@ -56,6 +56,8 @@ export default function Header() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 text-gray-300 hover:text-cyber-accent"
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMenuOpen ? (
