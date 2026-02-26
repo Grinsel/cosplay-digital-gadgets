@@ -160,4 +160,11 @@ export const en: Translations = {
     privacy: 'Privacy',
     copyright: '© {year} Cosplay Digital Gadgets. Fan project, no official connection to rights holders.',
   },
+
+  notFound: {
+    title: 'Page Not Found',
+    description: 'The page you\'re looking for doesn\'t exist or has been moved.',
+    homeButton: 'Back to Home',
+    gadgetsButton: 'Browse Gadgets',
+  },
 }

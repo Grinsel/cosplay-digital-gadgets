@@ -160,4 +160,11 @@ export const de: Translations = {
     privacy: 'Datenschutz',
     copyright: '© {year} Cosplay Digital Gadgets. Fan-Projekt, keine offizielle Verbindung zu Rechteinhabern.',
   },
+
+  notFound: {
+    title: 'Seite nicht gefunden',
+    description: 'Die gesuchte Seite existiert nicht oder wurde verschoben.',
+    homeButton: 'Zur Startseite',
+    gadgetsButton: 'Gadgets durchsuchen',
+  },
 }

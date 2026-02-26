@@ -161,4 +161,12 @@ export interface Translations {
     privacy: string
     copyright: string
   }
+
+  // 404 Not Found
+  notFound: {
+    title: string
+    description: string
+    homeButton: string
+    gadgetsButton: string
+  }
 }

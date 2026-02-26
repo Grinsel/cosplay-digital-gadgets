@@ -1,0 +1,43 @@
+{
+  "_comment": "Copy this template and add to content/gadgets.json array",
+
+  "id": "your-gadget-id",
+  "title": "Gadget Display Name",
+  "subtitle": {
+    "en": "Short English tagline",
+    "de": "Kurzer deutscher Untertitel"
+  },
+  "shortDescription": {
+    "en": "Brief description shown on gallery cards (1-2 sentences)",
+    "de": "Kurze Beschreibung für Galerie-Karten (1-2 Sätze)"
+  },
+  "longDescription": {
+    "en": "Detailed description for the gadget detail page. Explain what the app does, its purpose, and any background information.",
+    "de": "Ausführliche Beschreibung für die Gadget-Detailseite. Erkläre, was die App macht, ihren Zweck und Hintergrundinformationen."
+  },
+  "tags": ["Android", "Category1", "Category2"],
+  "status": "wip",
+  "youtube": "",
+  "download": {
+    "type": "local",
+    "apkPath": "/apks/your-gadget.apk",
+    "version": "1.0.0",
+    "sha256": ""
+  },
+  "features": [
+    { "en": "Feature description 1", "de": "Funktionsbeschreibung 1" },
+    { "en": "Feature description 2", "de": "Funktionsbeschreibung 2" },
+    { "en": "Feature description 3", "de": "Funktionsbeschreibung 3" }
+  ],
+  "howToUse": [
+    { "en": "Install the APK on your Android device", "de": "Installiere die APK auf deinem Android-Gerät" },
+    { "en": "Open the app", "de": "Öffne die App" },
+    { "en": "Follow on-screen instructions", "de": "Folge den Anweisungen auf dem Bildschirm" }
+  ],
+  "permissions": [],
+  "disclaimerNotes": {
+    "en": "",
+    "de": ""
+  },
+  "credits": ""
+}
