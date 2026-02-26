@@ -10,25 +10,32 @@ export default function PrivacyPage() {
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold text-white mb-8">{t.privacy.title}</h1>
 
-        <div className="bg-cyber-blue/10 border border-cyber-blue/30 rounded-lg p-6 mb-8">
-          <p className="text-cyber-blue">
-            {t.privacy.placeholder}
-          </p>
-        </div>
-
         <div className="space-y-8">
           <Section title={t.privacy.section1Title}>
             <p>{t.privacy.section1Text}</p>
-            <code className="block mt-4 text-cyber-accent bg-cyber-dark px-4 py-2 rounded font-mono text-sm">
-              [NAME AND CONTACT DETAILS - SEE LEGAL NOTICE]
-            </code>
+            <div className="mt-4 text-gray-300 bg-cyber-dark px-4 py-3 rounded">
+              <p>Marc Schmelzer</p>
+              <p>Marienstr. 1, Neunkirchen, Germany</p>
+              <p>cosplay.gadget@gmail.com</p>
+            </div>
           </Section>
 
           <Section title={t.privacy.section2Title}>
             <p>{t.privacy.section2Text}</p>
-            <code className="block mt-4 text-cyber-accent bg-cyber-dark px-4 py-2 rounded font-mono text-sm">
-              [HOSTING PROVIDER, e.g. Vercel, Netlify, GitHub Pages]
-            </code>
+            <div className="mt-4 text-gray-300 bg-cyber-dark px-4 py-3 rounded space-y-2">
+              <p><strong className="text-cyber-accent">App-Hosting:</strong> Railway Corporation, San Francisco, USA</p>
+              <p className="text-sm text-gray-400">
+                <a href="https://railway.app/legal/privacy" target="_blank" rel="noopener noreferrer" className="text-cyber-blue hover:underline">
+                  https://railway.app/legal/privacy
+                </a>
+              </p>
+              <p className="mt-2"><strong className="text-cyber-accent">Domain:</strong> STRATO AG, Berlin, Germany</p>
+              <p className="text-sm text-gray-400">
+                <a href="https://www.strato.de/datenschutz/" target="_blank" rel="noopener noreferrer" className="text-cyber-blue hover:underline">
+                  https://www.strato.de/datenschutz/
+                </a>
+              </p>
+            </div>
             <p className="mt-4 text-gray-400 text-sm">
               {t.privacy.section2Note}
             </p>
