@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getGadgetById } from '@/lib/gadgets'
 import { useLanguage, useTranslations } from '@/lib/i18n'
+import CommentList from '@/components/CommentList'
 
 interface Props {
   id: string
@@ -187,9 +188,12 @@ export default function GadgetDetailClient({ id }: Props) {
           </section>
         )}
 
+        {/* Feedback & Bug Reports */}
+        <CommentList type="bug" gadgetId={id} />
+
         {/* Credits */}
         {gadget.credits && (
-          <section className="text-center text-gray-500 text-sm">
+          <section className="text-center text-gray-500 text-sm mt-8">
             <p>{gadget.credits}</p>
           </section>
         )}

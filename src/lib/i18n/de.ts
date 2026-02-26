@@ -3,6 +3,7 @@ import { Translations } from './types'
 export const de: Translations = {
   nav: {
     allGadgets: 'Alle Gadgets',
+    ideas: 'Ideen',
     support: 'Support',
     disclaimer: 'Disclaimer',
   },
@@ -166,5 +167,36 @@ export const de: Translations = {
     description: 'Die gesuchte Seite existiert nicht oder wurde verschoben.',
     homeButton: 'Zur Startseite',
     gadgetsButton: 'Gadgets durchsuchen',
+  },
+
+  comments: {
+    ideasTitle: 'App-Ideen & Vorschläge',
+    feedbackTitle: 'Feedback & Bug-Reports',
+    placeholder: 'Schreibe deinen Kommentar...',
+    ideaPlaceholder: 'Beschreibe deine App-Idee oder deinen Vorschlag...',
+    bugPlaceholder: 'Beschreibe den Bug oder teile dein Feedback...',
+    replyPlaceholder: 'Schreibe deine Antwort...',
+    nicknamePlaceholder: 'Nickname (optional)',
+    submit: 'Absenden',
+    submitting: 'Wird gesendet...',
+    wait: 'Warte',
+    cancel: 'Abbrechen',
+    reply: 'Antworten',
+    cancelReply: 'Abbrechen',
+    loading: 'Lade Kommentare...',
+    retry: 'Erneut versuchen',
+    noComments: 'Noch keine Kommentare. Sei der Erste!',
+    noIdeas: 'Noch keine Ideen. Teile deinen Vorschlag!',
+    errorEmpty: 'Bitte gib einen Kommentar ein.',
+    errorTooShort: 'Kommentar muss mindestens 10 Zeichen haben.',
+    errorRateLimit: 'Bitte warte {seconds} Sekunden vor dem nächsten Kommentar.',
+    errorGeneric: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',
+    errorLoading: 'Kommentare konnten nicht geladen werden.',
+  },
+
+  ideas: {
+    title: 'App-Ideen',
+    subtitle: 'Schlage neue Gadget-Apps vor',
+    intro: 'Hast du eine Idee für eine neue Cosplay-Gadget-App? Teile sie hier! Alle Vorschläge sind willkommen.',
   },
 }

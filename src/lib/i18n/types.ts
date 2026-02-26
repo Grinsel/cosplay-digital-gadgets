@@ -4,6 +4,7 @@ export interface Translations {
   // Navigation
   nav: {
     allGadgets: string
+    ideas: string
     support: string
     disclaimer: string
   }
@@ -168,5 +169,38 @@ export interface Translations {
     description: string
     homeButton: string
     gadgetsButton: string
+  }
+
+  // Comments
+  comments: {
+    ideasTitle: string
+    feedbackTitle: string
+    placeholder: string
+    ideaPlaceholder: string
+    bugPlaceholder: string
+    replyPlaceholder: string
+    nicknamePlaceholder: string
+    submit: string
+    submitting: string
+    wait: string
+    cancel: string
+    reply: string
+    cancelReply: string
+    loading: string
+    retry: string
+    noComments: string
+    noIdeas: string
+    errorEmpty: string
+    errorTooShort: string
+    errorRateLimit: string
+    errorGeneric: string
+    errorLoading: string
+  }
+
+  // Ideas Page
+  ideas: {
+    title: string
+    subtitle: string
+    intro: string
   }
 }

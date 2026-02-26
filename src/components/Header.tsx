@@ -30,6 +30,12 @@ export default function Header() {
               {t.nav.allGadgets}
             </Link>
             <Link
+              href="/ideas"
+              className="text-gray-300 hover:text-cyber-accent transition-colors"
+            >
+              {t.nav.ideas}
+            </Link>
+            <Link
               href="/support"
               className="text-gray-300 hover:text-cyber-accent transition-colors"
             >
@@ -72,6 +78,13 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t.nav.allGadgets}
+              </Link>
+              <Link
+                href="/ideas"
+                className="text-gray-300 hover:text-cyber-accent transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t.nav.ideas}
               </Link>
               <Link
                 href="/support"

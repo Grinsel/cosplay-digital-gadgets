@@ -3,6 +3,7 @@ import { Translations } from './types'
 export const en: Translations = {
   nav: {
     allGadgets: 'All Gadgets',
+    ideas: 'Ideas',
     support: 'Support',
     disclaimer: 'Disclaimer',
   },
@@ -166,5 +167,36 @@ export const en: Translations = {
     description: 'The page you\'re looking for doesn\'t exist or has been moved.',
     homeButton: 'Back to Home',
     gadgetsButton: 'Browse Gadgets',
+  },
+
+  comments: {
+    ideasTitle: 'App Ideas & Suggestions',
+    feedbackTitle: 'Feedback & Bug Reports',
+    placeholder: 'Write your comment...',
+    ideaPlaceholder: 'Describe your app idea or suggestion...',
+    bugPlaceholder: 'Describe the bug or share your feedback...',
+    replyPlaceholder: 'Write your reply...',
+    nicknamePlaceholder: 'Nickname (optional)',
+    submit: 'Submit',
+    submitting: 'Submitting...',
+    wait: 'Wait',
+    cancel: 'Cancel',
+    reply: 'Reply',
+    cancelReply: 'Cancel',
+    loading: 'Loading comments...',
+    retry: 'Try again',
+    noComments: 'No comments yet. Be the first!',
+    noIdeas: 'No ideas yet. Share your suggestion!',
+    errorEmpty: 'Please enter a comment.',
+    errorTooShort: 'Comment must be at least 10 characters.',
+    errorRateLimit: 'Please wait {seconds} seconds before posting again.',
+    errorGeneric: 'Something went wrong. Please try again.',
+    errorLoading: 'Could not load comments.',
+  },
+
+  ideas: {
+    title: 'App Ideas',
+    subtitle: 'Suggest new gadget apps',
+    intro: 'Have an idea for a new cosplay gadget app? Share it here! All suggestions are welcome.',
   },
 }
