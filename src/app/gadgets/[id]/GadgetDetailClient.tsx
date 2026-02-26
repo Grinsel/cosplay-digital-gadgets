@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { getGadgetById } from '@/lib/gadgets'
 import { useLanguage, useTranslations } from '@/lib/i18n'
 import CommentList from '@/components/CommentList'
+import DownloadButton from '@/components/DownloadButton'
 
 interface Props {
   id: string
@@ -100,28 +101,18 @@ export default function GadgetDetailClient({ id }: Props) {
         {/* Download Section */}
         <section className="bg-cyber-darker border border-cyber-accent/20 rounded-lg p-6 mb-8">
           <h2 className="text-xl font-bold text-white mb-4">{t.gadgetDetail.download}</h2>
-          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-            {downloadUrl && downloadUrl !== '[GITHUB_RELEASE_URL]' ? (
-              <a
-                href={downloadUrl}
-                className="px-6 py-3 bg-cyber-accent text-cyber-dark font-bold rounded-lg hover:bg-cyber-accent/90 transition-all hover:scale-105 glow-green inline-flex items-center gap-2"
-              >
-                <span>📥</span>
-                {t.gadgetDetail.downloadApk}
-              </a>
-            ) : (
-              <span className="px-6 py-3 bg-gray-700 text-gray-400 font-bold rounded-lg cursor-not-allowed inline-flex items-center gap-2">
-                <span>📥</span>
-                {t.gadgetDetail.downloadComingSoon}
-              </span>
-            )}
-            <div className="text-sm text-gray-400">
-              {gadget.download.version && <span>Version {gadget.download.version}</span>}
-              {gadget.download.sha256 && (
-                <span className="ml-4 font-mono text-xs">SHA256: {gadget.download.sha256.slice(0, 16)}...</span>
-              )}
-            </div>
-          </div>
+          {downloadUrl && downloadUrl !== '[GITHUB_RELEASE_URL]' ? (
+            <DownloadButton
+              gadgetId={id}
+              downloadUrl={downloadUrl}
+              version={gadget.download.version}
+            />
+          ) : (
+            <span className="px-6 py-3 bg-gray-700 text-gray-400 font-bold rounded-lg cursor-not-allowed inline-flex items-center gap-2">
+              <span>📥</span>
+              {t.gadgetDetail.downloadComingSoon}
+            </span>
+          )}
         </section>
 
         {/* Description */}

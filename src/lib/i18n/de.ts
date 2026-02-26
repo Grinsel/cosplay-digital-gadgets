@@ -60,6 +60,8 @@ export const de: Translations = {
     download: 'Download',
     downloadApk: 'APK herunterladen',
     downloadComingSoon: 'Download folgt...',
+    downloadSingular: 'Download',
+    downloadPlural: 'Downloads',
     description: 'Beschreibung',
     features: 'Features',
     howToUse: 'Bedienung',

@@ -36,7 +36,7 @@
     "youtube": "7gZ-NVVBxEQ",
     "download": {
       "type": "external",
-      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/alien-motion-tracker.apk",
       "version": "1.0"
     },
     "credits": {
@@ -86,7 +86,7 @@
     "youtube": "_rI-QDH7kVg",
     "download": {
       "type": "external",
-      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/cyberpunk-hacker.apk",
       "version": "1.0"
     },
     "credits": {
@@ -136,7 +136,7 @@
     "youtube": "Q7J0v_aNFtI",
     "download": {
       "type": "external",
-      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/nod-ops-device.apk",
       "version": "1.0"
     },
     "credits": {
@@ -188,7 +188,7 @@
     "youtube": "plVm5GtOw7Y",
     "download": {
       "type": "external",
-      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/predator-countdown.apk",
       "version": "1.0"
     },
     "credits": {
@@ -239,7 +239,7 @@
     "youtube": "BUdlt3MCnNo",
     "download": {
       "type": "external",
-      "apkUrl": "[GITHUB_RELEASE_URL]",
+      "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/tactical-scanner.apk",
       "version": "2.0"
     },
     "credits": {

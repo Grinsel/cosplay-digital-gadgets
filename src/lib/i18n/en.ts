@@ -60,6 +60,8 @@ export const en: Translations = {
     download: 'Download',
     downloadApk: 'Download APK',
     downloadComingSoon: 'Download coming soon...',
+    downloadSingular: 'download',
+    downloadPlural: 'downloads',
     description: 'Description',
     features: 'Features',
     howToUse: 'How to Use',

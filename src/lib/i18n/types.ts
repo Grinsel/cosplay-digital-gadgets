@@ -64,6 +64,8 @@ export interface Translations {
     download: string
     downloadApk: string
     downloadComingSoon: string
+    downloadSingular: string
+    downloadPlural: string
     description: string
     features: string
     howToUse: string

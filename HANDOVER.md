@@ -182,10 +182,17 @@ const firebaseConfig = {
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    // Comments collection
     match /comments/{commentId} {
       allow read: if resource.data.status == "visible";
       allow create: if true;
       allow update, delete: if request.auth != null;
+    }
+
+    // Download counter collection
+    match /downloads/{gadgetId} {
+      allow read: if true;
+      allow write: if true;  // Allows increment from client
     }
   }
 }
@@ -248,7 +255,7 @@ service cloud.firestore {
 - [ ] **Domain konfigurieren** - DNS bei Strato auf Railway zeigen
 
 ### 9.2 Mittlere Priorität
-- [ ] **APK-Downloads** - Echte APK-Links in Gadget-Daten eintragen
+- [x] **APK-Downloads** - Echte APK-Links in Gadget-Daten eintragen (GitHub Raw)
 - [ ] **YouTube-Videos** - Video-URLs für alle Gadgets hinzufügen
 - [ ] **Thumbnails** - Echte Bilder in `/public/gadgets/[id]/thumb.png`
 - [ ] **Impressum ausfüllen** - Echte Kontaktdaten eintragen
@@ -385,7 +392,35 @@ npm start
 
 ---
 
-## 14. Bot-Schutz Details
+## 14. Download-Tracking
+
+### Funktionsweise
+- APKs liegen im Git-Repo unter `public/apk/[gadget-id].apk`
+- Downloads erfolgen von GitHub Raw (kostenloser Traffic)
+- Bei jedem Klick wird ein Counter in Firestore erhöht
+- Counter wird live auf der Gadget-Seite angezeigt
+
+### Dateien
+- `src/lib/downloads.ts` - Firestore Funktionen für Counter
+- `src/components/DownloadButton.tsx` - Button mit Counter-Anzeige
+
+### Download-URLs (GitHub Raw)
+```
+https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/[gadget-id].apk
+```
+
+### Firestore Collection: `downloads`
+```typescript
+{
+  [gadgetId]: {
+    count: number  // Atomarer Counter mit increment()
+  }
+}
+```
+
+---
+
+## 15. Bot-Schutz Details
 
 ### Honeypot
 - Verstecktes Feld `name="website"` in CommentForm
@@ -399,7 +434,7 @@ npm start
 
 ---
 
-## 15. Kontakt & Support
+## 16. Kontakt & Support
 
 ### Projekt-Owner
 - Windows-User: marcj
@@ -412,7 +447,7 @@ npm start
 
 ---
 
-## 16. Bekannte Probleme
+## 17. Bekannte Probleme
 
 1. **"nul" Datei bei Git** - Windows-spezifisches Problem. Bei `git add` explizit Dateien auflisten statt `-A`
 
@@ -422,7 +457,7 @@ npm start
 
 ---
 
-## 17. Nächste Session - Quick Start
+## 18. Nächste Session - Quick Start
 
 ```bash
 # 1. In Projektverzeichnis wechseln
