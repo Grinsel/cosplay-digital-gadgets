@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Server mode for Railway/Vercel hosting
-  // Remove 'output: export' to enable next start
+  // Serve under /gadgets subdirectory
+  basePath: '/gadgets',
   trailingSlash: true,
   images: {
     unoptimized: true,
