@@ -4,7 +4,12 @@ const nextConfig = {
   basePath: '/gadgets',
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
 }
 

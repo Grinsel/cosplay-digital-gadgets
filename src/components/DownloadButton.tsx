@@ -35,8 +35,12 @@ export default function DownloadButton({ gadgetId, downloadUrl, version }: Props
   const handleDownload = async () => {
     setIsDownloading(true)
 
-    // Increment counter
-    await incrementDownloadCount(gadgetId)
+    // Increment counter (don't block download if this fails)
+    try {
+      await incrementDownloadCount(gadgetId)
+    } catch (error) {
+      console.error('Failed to increment download count:', error)
+    }
 
     // Open download in new tab
     window.open(downloadUrl, '_blank')

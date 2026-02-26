@@ -29,16 +29,22 @@ export default function CommentForm({
   const [error, setError] = useState<string | null>(null)
   const [waitTime, setWaitTime] = useState(0)
 
-  // Check rate limit on mount and periodically
+  // Check rate limit on mount and countdown only when rate limited
   useEffect(() => {
-    const checkLimit = () => {
-      const { allowed, waitTime: wait } = canSubmitComment()
-      setWaitTime(allowed ? 0 : wait)
-    }
+    const { allowed, waitTime: wait } = canSubmitComment()
+    setWaitTime(allowed ? 0 : wait)
 
-    checkLimit()
-    const interval = setInterval(checkLimit, 1000)
-    return () => clearInterval(interval)
+    // Only run interval if actually rate limited
+    if (!allowed && wait > 0) {
+      const interval = setInterval(() => {
+        const { allowed: nowAllowed, waitTime: nowWait } = canSubmitComment()
+        setWaitTime(nowAllowed ? 0 : nowWait)
+        if (nowAllowed) {
+          clearInterval(interval)
+        }
+      }, 1000)
+      return () => clearInterval(interval)
+    }
   }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {

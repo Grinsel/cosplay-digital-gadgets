@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getGadgetById } from '@/lib/gadgets'
 import { useLanguage, useTranslations } from '@/lib/i18n'
+import { getVideoId } from '@/lib/utils'
 import CommentList from '@/components/CommentList'
 import DownloadButton from '@/components/DownloadButton'
 
@@ -57,34 +58,22 @@ export default function GadgetDetailClient({ id }: Props) {
         </header>
 
         {/* YouTube Video (Shorts format 9:16) */}
-        {gadget.youtube && (() => {
-          let videoId = gadget.youtube
-          if (gadget.youtube.includes('youtube.com')) {
-            const url = new URL(gadget.youtube)
-            if (url.pathname.includes('/shorts/')) {
-              videoId = url.pathname.split('/shorts/')[1]
-            } else {
-              videoId = url.searchParams.get('v') || gadget.youtube
-            }
-          } else if (gadget.youtube.includes('youtu.be')) {
-            videoId = new URL(gadget.youtube).pathname.slice(1)
-          }
-          return (
-            <section className="mb-8">
-              <div className="flex justify-center">
-                <div className="w-full max-w-sm aspect-[9/16] bg-cyber-darker rounded-lg overflow-hidden border border-cyber-accent/20">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${videoId}`}
-                    title={`${gadget.title} Demo`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-full"
-                  />
-                </div>
+        {gadget.youtube && (
+          <section className="mb-8">
+            <div className="flex justify-center">
+              <div className="w-full max-w-sm aspect-[9/16] bg-cyber-darker rounded-lg overflow-hidden border border-cyber-accent/20">
+                <iframe
+                  src={`https://www.youtube.com/embed/${getVideoId(gadget.youtube)}`}
+                  title={`${gadget.title} Demo`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                  className="w-full h-full"
+                />
               </div>
-            </section>
-          )
-        })()}
+            </div>
+          </section>
+        )}
 
         {/* Video Placeholder */}
         {!gadget.youtube && (

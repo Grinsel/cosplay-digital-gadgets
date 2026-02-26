@@ -1,37 +1,16 @@
 'use client'
 
+import { memo } from 'react'
 import Link from 'next/link'
 import { Gadget } from '@/lib/types'
 import { useTranslations } from '@/lib/i18n'
+import { getVideoId } from '@/lib/utils'
 
 interface GadgetCardProps {
   gadget: Gadget
 }
 
-function getVideoId(youtube: string): string {
-  let videoId = youtube
-  if (youtube.includes('youtube.com')) {
-    try {
-      const url = new URL(youtube)
-      if (url.pathname.includes('/shorts/')) {
-        videoId = url.pathname.split('/shorts/')[1]
-      } else {
-        videoId = url.searchParams.get('v') || youtube
-      }
-    } catch {
-      videoId = youtube
-    }
-  } else if (youtube.includes('youtu.be')) {
-    try {
-      videoId = new URL(youtube).pathname.slice(1)
-    } catch {
-      videoId = youtube
-    }
-  }
-  return videoId
-}
-
-export default function GadgetCard({ gadget }: GadgetCardProps) {
+export default memo(function GadgetCard({ gadget }: GadgetCardProps) {
   const t = useTranslations()
 
   return (
@@ -93,4 +72,4 @@ export default function GadgetCard({ gadget }: GadgetCardProps) {
       </Link>
     </article>
   )
-}
+})

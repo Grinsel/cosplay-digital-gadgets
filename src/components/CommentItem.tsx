@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import { Comment } from '@/lib/comments'
 import { useTranslations } from '@/lib/i18n'
+import { formatDate } from '@/lib/utils'
 import CommentForm from './CommentForm'
 
 interface CommentItemProps {
@@ -11,19 +12,9 @@ interface CommentItemProps {
   isReply?: boolean
 }
 
-export default function CommentItem({ comment, onReplyAdded, isReply = false }: CommentItemProps) {
+export default memo(function CommentItem({ comment, onReplyAdded, isReply = false }: CommentItemProps) {
   const t = useTranslations()
   const [showReplyForm, setShowReplyForm] = useState(false)
-
-  const formatDate = (date: Date) => {
-    return new Intl.DateTimeFormat('de-DE', {
-      day: '2-digit',
-      month: '2-digit',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-    }).format(date)
-  }
 
   const handleReplySuccess = () => {
     setShowReplyForm(false)
@@ -87,4 +78,4 @@ export default function CommentItem({ comment, onReplyAdded, isReply = false }: 
       )}
     </div>
   )
-}
+})
