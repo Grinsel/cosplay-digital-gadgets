@@ -1,19 +1,85 @@
 # Übergabeprotokoll: Cosplay Digital Gadgets
 
 **Erstellt:** 2026-02-26
-**Projekt:** Cosplay Digital Gadget Page
-**Status:** Funktionsfähig, einige Features ausstehend
+**Letzte Aktualisierung:** 2026-02-27
+**Projekt:** Cosplay Digital Gadget Page + Grinsel Landing (integriert)
+**Status:** Produktionsbereit
+
+---
+
+## CHANGELOG Session 2026-02-27
+
+### Haupt-Änderung: Landing Page Integration
+
+Die separate `grinsel_landing` App wurde in die `cosplay_digital_gadget_page` integriert:
+
+| Vorher | Nachher |
+|--------|---------|
+| 2 separate Railway-Services | 1 kombinierter Service |
+| `basePath: '/gadgets'` | kein basePath |
+| Landing unter eigener Domain | Landing unter `/` |
+| Gadgets unter `/gadgets/` (mit basePath) | Gadgets unter `/gadgets/` (echtes Verzeichnis) |
+
+### Durchgeführte Änderungen
+
+1. **Dateien verschoben nach `/gadgets/`:**
+   - `ideas/`, `support/`, `disclaimer/`, `impressum/`, `privacy/`, `manage-gx7k9m/`
+
+2. **Neue Landing Page:** `src/app/page.tsx`
+   - Kopiert von grinsel_landing
+   - Links korrigiert (relative Pfade statt Railway-URLs)
+
+3. **Nested Layout erstellt:** `src/app/gadgets/layout.tsx`
+   - Header, Footer, Providers für Gadgets-Bereich
+
+4. **Root Layout vereinfacht:** `src/app/layout.tsx`
+   - Minimal, ohne Header/Footer
+   - OG-Image und Icon für Landing
+
+5. **next.config.js:** `basePath` entfernt
+
+6. **Alle Links aktualisiert:**
+   - Header.tsx, Footer.tsx, GadgetDetailClient.tsx, ideas/page.tsx
+
+7. **SEO aktualisiert:**
+   - sitemap.ts: Alle URLs unter `grinsel.online`
+   - robots.ts: Sitemap-URL korrigiert
+
+8. **Assets kopiert:**
+   - `public/icon.svg`
+   - `public/og_image.png`
+
+### Weitere Fixes dieser Session
+
+- **YouTube iframe lazy loading:** `loading="lazy"` hinzugefügt (Performance)
+- **React.memo:** GadgetCard, CommentItem optimiert
+- **getVideoId Utility:** Nach `src/lib/utils.ts` extrahiert
+- **Focus-visible States:** CSS für Accessibility
+- **DownloadButton:** Bessere Fehlerbehandlung
+- **Rate-Limit Interval:** Cleanup-Bug behoben
+
+### Commits
+
+```
+2875e6d Integrate landing page into gadgets app
+74cfa19 Add handover documentation
+2805a8c Add anonymous comment system with Firebase
+e075278 Configure basePath /gadgets + SEO optimization
+...
+```
 
 ---
 
 ## 1. Projektübersicht
 
-Eine Next.js Website für Cosplay-Gadget-Apps (Android APKs). Die Apps sind visuelle Simulationen für Conventions, Fotoshoots und Live-Roleplay (Scanner, Tracker, Timer, Terminals etc.).
+Eine Next.js Website für Cosplay-Gadget-Apps (Android APKs) mit integrierter Landing Page. Die Apps sind visuelle Simulationen für Conventions, Fotoshoots und Live-Roleplay.
 
 ### Kernfunktionen
+- **Landing Page** (Grinsel-Übersicht) unter `/`
+- **Gadgets-App** unter `/gadgets/` mit allen Features
 - Bilingual (Deutsch/Englisch) mit automatischer Browser-Erkennung
 - Gadget-Katalog mit Filterung nach Tags und Status
-- Detailseiten für jedes Gadget mit YouTube-Video, Download, Features
+- Detailseiten mit YouTube-Video, Download, Features
 - Anonymes Kommentarsystem (Firebase)
 - Admin-Dashboard für Kommentar-Moderation
 - SEO-optimiert (Sitemap, Open Graph, Twitter Cards)
@@ -29,170 +95,135 @@ Eine Next.js Website für Cosplay-Gadget-Apps (Android APKs). Die Apps sind visu
 | Styling | Tailwind CSS (Cyberpunk-Theme) |
 | Backend | Firebase (Firestore + Auth) |
 | Hosting | Railway |
-| Domain | www.grinsel.online (bei Strato gekauft) |
+| Domain | www.grinsel.online (Strato) |
 
 ---
 
-## 3. Projektstruktur
+## 3. Projektstruktur (AKTUALISIERT)
 
 ```
 cosplay_digital_gadget_page/
 ├── src/
 │   ├── app/
-│   │   ├── page.tsx                    # Landing Page
-│   │   ├── layout.tsx                  # Root Layout mit Providers
+│   │   ├── page.tsx                    # Landing Page (Grinsel)
+│   │   ├── layout.tsx                  # Root Layout (minimal)
 │   │   ├── globals.css                 # Tailwind + Custom CSS
-│   │   ├── gadgets/
-│   │   │   ├── page.tsx                # Gadget-Übersicht
-│   │   │   └── [id]/
-│   │   │       ├── page.tsx            # Server Component (Metadata)
-│   │   │       └── GadgetDetailClient.tsx  # Client Component
-│   │   ├── ideas/
-│   │   │   └── page.tsx                # Ideen-Vorschläge
-│   │   ├── support/
-│   │   │   └── page.tsx                # Spenden-Seite
-│   │   ├── disclaimer/
-│   │   │   └── page.tsx                # Haftungsausschluss
-│   │   ├── impressum/
-│   │   │   └── page.tsx                # Impressum
-│   │   ├── privacy/
-│   │   │   └── page.tsx                # Datenschutz
-│   │   ├── manage-gx7k9m/
-│   │   │   └── page.tsx                # Admin-Dashboard (geheimer Pfad!)
-│   │   ├── sitemap.ts                  # SEO Sitemap
-│   │   └── robots.ts                   # SEO Robots.txt
+│   │   ├── not-found.tsx               # 404 Seite
+│   │   ├── error.tsx                   # Error Boundary
+│   │   ├── sitemap.ts                  # Kombinierte Sitemap
+│   │   ├── robots.ts                   # robots.txt
+│   │   ├── api/
+│   │   │   └── download/route.ts       # Download-Tracking API
+│   │   │
+│   │   └── gadgets/                    # ← GADGETS-BEREICH
+│   │       ├── layout.tsx              # Nested Layout (Header/Footer/Providers)
+│   │       ├── page.tsx                # Gadget-Übersicht
+│   │       ├── [id]/
+│   │       │   ├── page.tsx            # Server Component (Metadata)
+│   │       │   └── GadgetDetailClient.tsx
+│   │       ├── ideas/page.tsx
+│   │       ├── support/page.tsx
+│   │       ├── disclaimer/page.tsx
+│   │       ├── impressum/page.tsx
+│   │       ├── privacy/page.tsx
+│   │       └── manage-gx7k9m/page.tsx  # Admin (GEHEIM!)
 │   │
 │   ├── components/
-│   │   ├── Header.tsx                  # Navigation
-│   │   ├── Footer.tsx                  # Footer
-│   │   ├── GadgetCard.tsx              # Gadget-Vorschaukarte
-│   │   ├── LanguageSwitcher.tsx        # DE/EN Toggle
-│   │   ├── CommentForm.tsx             # Kommentar-Formular
-│   │   ├── CommentItem.tsx             # Einzelner Kommentar
-│   │   └── CommentList.tsx             # Kommentar-Liste
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   ├── GadgetCard.tsx              # mit React.memo
+│   │   ├── LanguageSwitcher.tsx
+│   │   ├── CommentForm.tsx
+│   │   ├── CommentItem.tsx             # mit React.memo
+│   │   ├── CommentList.tsx
+│   │   ├── DownloadButton.tsx
+│   │   └── Providers.tsx
 │   │
-│   ├── lib/
-│   │   ├── gadgets/
-│   │   │   ├── index.ts                # Gadget-API (getGadgetById, getAllGadgets)
-│   │   │   ├── types.ts                # TypeScript Interfaces
-│   │   │   └── data/
-│   │   │       ├── geiger-counter.ts   # Gadget-Daten
-│   │   │       ├── pip-boy-terminal.ts
-│   │   │       ├── motion-tracker.ts
-│   │   │       └── ...                 # Weitere Gadgets
-│   │   ├── i18n/
-│   │   │   ├── index.tsx               # i18n Provider + Hooks
-│   │   │   ├── types.ts                # Translation Interface
-│   │   │   ├── en.ts                   # Englische Texte
-│   │   │   └── de.ts                   # Deutsche Texte
-│   │   ├── firebase.ts                 # Firebase Config
-│   │   └── comments.ts                 # Kommentar-API
-│   │
-│   └── providers/
-│       └── Providers.tsx               # Context Providers
+│   └── lib/
+│       ├── gadgets/
+│       │   ├── index.ts
+│       │   ├── types.ts
+│       │   └── data/*.ts
+│       ├── i18n/
+│       │   ├── index.tsx
+│       │   ├── types.ts
+│       │   ├── en.ts
+│       │   └── de.ts
+│       ├── firebase.ts
+│       ├── comments.ts
+│       ├── downloads.ts
+│       └── utils.ts                    # getVideoId, formatDate
 │
 ├── public/
-│   ├── gadgets/
-│   │   └── [gadget-id]/
-│   │       └── thumb.png               # Thumbnail-Bilder
-│   └── apk/                            # APK-Downloads (falls lokal)
+│   ├── icon.svg                        # NEU: Favicon
+│   ├── og_image.png                    # NEU: OG Image
+│   ├── apk/                            # APK Downloads
+│   └── gadgets/[id]/thumb.png
 │
-├── next.config.js                      # Next.js Config
-├── tailwind.config.ts                  # Tailwind Config (Cyberpunk-Farben)
-├── package.json
-└── tsconfig.json
+├── next.config.js                      # KEIN basePath mehr!
+├── tailwind.config.ts
+└── HANDOVER.md
 ```
 
 ---
 
-## 4. Datenstruktur
+## 4. URL-Struktur (AKTUALISIERT)
 
-### 4.1 Gadget-Daten (src/lib/gadgets/types.ts)
-
-```typescript
-interface GadgetData {
-  id: string
-  title: string
-  subtitle: string
-  description: string
-  longDescription: string
-  tags: string[]
-  status: 'stable' | 'wip'
-  youtube?: string
-  features: string[]
-  howToUse: string[]
-  permissions?: string[]
-  disclaimerNotes?: string
-  credits?: string
-  download: {
-    type: 'github' | 'local'
-    apkUrl?: string
-    apkPath?: string
-    version?: string
-    sha256?: string
-  }
-}
-
-// Bilingual wrapper
-interface Gadget {
-  id: string
-  en: GadgetData
-  de: GadgetData
-}
-```
-
-### 4.2 Kommentar-Daten (Firestore)
-
-```typescript
-interface Comment {
-  id: string
-  type: 'idea' | 'bug'
-  gadgetId: string | null      // null für allgemeine Ideen
-  content: string
-  nickname: string             // "Anonym" wenn leer
-  createdAt: Timestamp
-  parentId: string | null      // für verschachtelte Antworten
-  status: 'visible' | 'hidden'
-}
-```
+| Seite | Pfad |
+|-------|------|
+| **Landing** | `/` |
+| Alle Gadgets | `/gadgets/` |
+| Gadget-Detail | `/gadgets/[id]/` |
+| Ideen | `/gadgets/ideas/` |
+| Support/Spenden | `/gadgets/support/` |
+| Disclaimer | `/gadgets/disclaimer/` |
+| Impressum | `/gadgets/impressum/` |
+| Datenschutz | `/gadgets/privacy/` |
+| **Admin-Panel** | `/gadgets/manage-gx7k9m/` (GEHEIM!) |
 
 ---
 
-## 5. Firebase-Konfiguration
+## 5. Hosting & Domain
 
-### 5.1 Projekt-Details
+### Railway Service
+- **Dashboard:** https://railway.app/dashboard
+- **Service-Name:** cosplay-digital-gadgets
+- **Auto-Deploy:** Bei Push auf `master` Branch
+- **Domain:** www.grinsel.online
+
+### DNS (Strato)
+```
+CNAME  www  →  a3ez7r76.up.railway.app
+TXT    _railway-verify.www  →  [verification code]
+```
+
+**Hinweis:** Apex-Domain (grinsel.online ohne www) funktioniert NICHT, da Strato keine ALIAS-Records unterstützt.
+
+### GitHub
+- **Repository:** https://github.com/Grinsel/cosplay-digital-gadgets
+- **Branch:** master
+
+---
+
+## 6. Firebase-Konfiguration
+
+### Projekt-Details
 - **Projekt-ID:** cosplay-gadgets-comments
 - **Console:** https://console.firebase.google.com/project/cosplay-gadgets-comments
 
-### 5.2 Config (src/lib/firebase.ts)
-```typescript
-const firebaseConfig = {
-  apiKey: "AIzaSyBR49LPOPA5vQxBn-r6Ga17Rel3mJS1plA",
-  authDomain: "cosplay-gadgets-comments.firebaseapp.com",
-  projectId: "cosplay-gadgets-comments",
-  storageBucket: "cosplay-gadgets-comments.firebasestorage.app",
-  messagingSenderId: "160075053085",
-  appId: "1:160075053085:web:8506326b28fc63f643eef4",
-  measurementId: "G-1SEFS0DZNE"
-}
-```
-
-### 5.3 Security Rules (in Firebase Console setzen!)
+### Security Rules (WICHTIG - in Firebase Console setzen!)
 ```javascript
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Comments collection
     match /comments/{commentId} {
       allow read: if resource.data.status == "visible";
       allow create: if true;
       allow update, delete: if request.auth != null;
     }
-
-    // Download counter collection
     match /downloads/{gadgetId} {
       allow read: if true;
-      allow write: if true;  // Allows increment from client
+      allow write: if true;
     }
   }
 }
@@ -200,179 +231,57 @@ service cloud.firestore {
 
 ---
 
-## 6. Hosting & Deployment
-
-### 6.1 Railway
-- **Dashboard:** https://railway.app/dashboard
-- **Projekt:** cosplay-digital-gadget-page
-- **Auto-Deploy:** Bei Push auf `main` Branch
-
-### 6.2 Domain
-- **Domain:** www.grinsel.online
-- **Registrar:** Strato
-- **Status:** Gekauft, DNS noch nicht konfiguriert
-
-### 6.3 GitHub
-- **Repository:** (im User-Account, Name nicht explizit genannt)
-- **Branch:** main
-
----
-
-## 7. Wichtige URLs
-
-| Seite | Pfad |
-|-------|------|
-| Landing | `/` |
-| Alle Gadgets | `/gadgets` |
-| Gadget-Detail | `/gadgets/[id]` |
-| Ideen | `/ideas` |
-| Support/Spenden | `/support` |
-| Disclaimer | `/disclaimer` |
-| Impressum | `/impressum` |
-| Datenschutz | `/privacy` |
-| **Admin-Panel** | `/manage-gx7k9m` (GEHEIM!) |
-
----
-
-## 8. Aktuelle Gadgets
+## 7. Aktuelle Gadgets
 
 | ID | Name | Status |
 |----|------|--------|
-| geiger-counter | Geiger Counter | stable |
-| pip-boy-terminal | Pip-Boy Terminal | stable |
-| motion-tracker | Motion Tracker | wip |
-| neural-scanner | Neural Scanner | wip |
-| biometric-scanner | Biometric Scanner | stable |
-| quantum-analyzer | Quantum Analyzer | wip |
+| alien-motion-tracker | Alien Motion Tracker | stable |
+| cyberpunk-hacker | Cyberpunk Hacker Terminal | stable |
+| nod-ops-device | NOD Ops Device | wip |
+| fallout-pip-boy | Fallout Pip-Boy | wip |
+| star-trek-tricorder | Star Trek Tricorder | wip |
+
+---
+
+## 8. Erledigte Aufgaben (diese Session)
+
+- [x] Landing Page in Gadgets-App integriert
+- [x] basePath entfernt, nested Layout erstellt
+- [x] Alle Links aktualisiert
+- [x] Sitemap/robots.txt korrigiert
+- [x] OG-Image und Icon hinzugefügt
+- [x] Firestore Security Rules (vom User in Console gesetzt)
+- [x] www.grinsel.online Domain konfiguriert
+- [x] YouTube iframe lazy loading
+- [x] Performance-Optimierungen (React.memo, etc.)
+- [x] Build erfolgreich getestet
 
 ---
 
 ## 9. Ausstehende Aufgaben
 
-### 9.1 Hohe Priorität
-- [ ] **Firebase Admin-Account erstellen** - In Firebase Console unter Authentication → Users
-- [ ] **Firestore Security Rules setzen** - Siehe Abschnitt 5.3
-- [ ] **Domain konfigurieren** - DNS bei Strato auf Railway zeigen
+### Nach Deployment
+- [ ] grinsel-landing Railway-Service deaktivieren/löschen
+- [ ] Testen: www.grinsel.online/
+- [ ] Testen: www.grinsel.online/gadgets/
+- [ ] Alle Navigation-Links prüfen
+- [ ] Mobile Menu testen
+- [ ] Kommentare testen
+- [ ] Admin-Panel testen
 
-### 9.2 Mittlere Priorität
-- [x] **APK-Downloads** - Echte APK-Links in Gadget-Daten eintragen (GitHub Raw)
-- [ ] **YouTube-Videos** - Video-URLs für alle Gadgets hinzufügen
-- [ ] **Thumbnails** - Echte Bilder in `/public/gadgets/[id]/thumb.png`
-- [ ] **Impressum ausfüllen** - Echte Kontaktdaten eintragen
+### Mittlere Priorität
+- [ ] YouTube-Videos für alle Gadgets
+- [ ] Thumbnails für alle Gadgets
+- [ ] Google Search Console: Sitemap einreichen
 
-### 9.3 Niedrige Priorität
-- [ ] Spenden-Links einrichten (Ko-fi, Buy Me a Coffee)
+### Niedrige Priorität
+- [ ] grinsel_landing Repository archivieren
 - [ ] Weitere Gadgets hinzufügen
-- [ ] Pagination für Kommentare bei vielen Einträgen
+- [ ] Ko-fi/PayPal Spenden-Links testen
 
 ---
 
-## 10. Neues Gadget hinzufügen
-
-### Schritt 1: Datendatei erstellen
-```typescript
-// src/lib/gadgets/data/my-new-gadget.ts
-import { Gadget } from '../types'
-
-export const myNewGadget: Gadget = {
-  id: 'my-new-gadget',
-  en: {
-    id: 'my-new-gadget',
-    title: 'My New Gadget',
-    subtitle: 'A cool new prop',
-    description: 'Short description',
-    longDescription: 'Full description...',
-    tags: ['scanner', 'sci-fi'],
-    status: 'wip',
-    youtube: 'https://youtube.com/shorts/xxxxx',
-    features: ['Feature 1', 'Feature 2'],
-    howToUse: ['Step 1', 'Step 2'],
-    permissions: ['CAMERA'],
-    download: {
-      type: 'github',
-      apkUrl: '[GITHUB_RELEASE_URL]',
-      version: '1.0.0'
-    }
-  },
-  de: {
-    // Deutsche Version...
-  }
-}
-```
-
-### Schritt 2: In Index registrieren
-```typescript
-// src/lib/gadgets/index.ts
-import { myNewGadget } from './data/my-new-gadget'
-
-const gadgets: Gadget[] = [
-  // ... existing gadgets
-  myNewGadget,
-]
-```
-
-### Schritt 3: Thumbnail hinzufügen
-```
-public/gadgets/my-new-gadget/thumb.png
-```
-
----
-
-## 11. Übersetzungen hinzufügen
-
-### Schritt 1: Types erweitern (falls neue Keys)
-```typescript
-// src/lib/i18n/types.ts
-export interface Translations {
-  mySection: {
-    myKey: string
-  }
-}
-```
-
-### Schritt 2: In beiden Sprachen hinzufügen
-```typescript
-// src/lib/i18n/en.ts
-mySection: {
-  myKey: 'English text',
-}
-
-// src/lib/i18n/de.ts
-mySection: {
-  myKey: 'Deutscher Text',
-}
-```
-
----
-
-## 12. Styling (Tailwind Custom Classes)
-
-### Farben (tailwind.config.ts)
-```typescript
-colors: {
-  'cyber-dark': '#0a0a0f',
-  'cyber-darker': '#050508',
-  'cyber-accent': '#00ff88',    // Grün
-  'cyber-blue': '#00d4ff',      // Cyan
-  'cyber-purple': '#bf00ff',
-  'cyber-red': '#ff0055',
-}
-```
-
-### Custom Classes (globals.css)
-```css
-.glow-green     /* Grüner Glow-Effekt */
-.glow-blue      /* Blauer Glow-Effekt */
-.text-glow-green /* Text mit grünem Glow */
-.badge          /* Tag/Status Badge */
-.badge-stable   /* Grüner Status */
-.badge-wip      /* Gelber Status */
-.badge-tag      /* Grauer Tag */
-```
-
----
-
-## 13. Entwicklung starten
+## 10. Entwicklung starten
 
 ```bash
 cd C:\Users\marcj\git10\cosplay_digital_gadget_page
@@ -386,95 +295,102 @@ npm run dev
 # Build erstellen
 npm run build
 
-# Produktions-Preview
-npm start
+# Im Browser
+http://localhost:3000        # Landing
+http://localhost:3000/gadgets/  # Gadgets
 ```
 
 ---
 
-## 14. Download-Tracking
+## 11. Neues Gadget hinzufügen
 
-### Funktionsweise
-- APKs liegen im Git-Repo unter `public/apk/[gadget-id].apk`
-- Downloads erfolgen von GitHub Raw (kostenloser Traffic)
-- Bei jedem Klick wird ein Counter in Firestore erhöht
-- Counter wird live auf der Gadget-Seite angezeigt
-
-### Dateien
-- `src/lib/downloads.ts` - Firestore Funktionen für Counter
-- `src/components/DownloadButton.tsx` - Button mit Counter-Anzeige
-
-### Download-URLs (GitHub Raw)
-```
-https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/[gadget-id].apk
-```
-
-### Firestore Collection: `downloads`
+### Schritt 1: Datendatei erstellen
 ```typescript
-{
-  [gadgetId]: {
-    count: number  // Atomarer Counter mit increment()
-  }
+// src/lib/gadgets/data/my-new-gadget.ts
+import { Gadget } from '../types'
+
+export const myNewGadget: Gadget = {
+  id: 'my-new-gadget',
+  en: { /* ... */ },
+  de: { /* ... */ }
 }
 ```
 
----
-
-## 15. Bot-Schutz Details
-
-### Honeypot
-- Verstecktes Feld `name="website"` in CommentForm
-- CSS: `className="hidden"`, `tabIndex={-1}`
-- Wenn ausgefüllt → Kommentar wird still verworfen (kein Fehler für Bot)
-
-### Rate Limiting
-- 60 Sekunden zwischen Kommentaren
-- Gespeichert in `localStorage`
-- Countdown wird im UI angezeigt
-
----
-
-## 16. Kontakt & Support
-
-### Projekt-Owner
-- Windows-User: marcj
-- Git-Verzeichnis: `C:\Users\marcj\git10\`
-
-### Verwandte Projekte
-- **grinsel_landing** - Landing Page für grinsel.online Root
-  - Pfad: `C:\Users\marcj\git10\grinsel_landing`
-  - Status: Grundgerüst erstellt
-
----
-
-## 17. Bekannte Probleme
-
-1. **"nul" Datei bei Git** - Windows-spezifisches Problem. Bei `git add` explizit Dateien auflisten statt `-A`
-
-2. **YouTube Shorts** - Werden korrekt als 9:16 eingebettet, aber manche Browser zeigen schwarze Balken
-
-3. **Mobile Menu** - LanguageSwitcher im Mobile-Menu könnte besser positioniert sein
-
----
-
-## 18. Nächste Session - Quick Start
-
-```bash
-# 1. In Projektverzeichnis wechseln
-cd C:\Users\marcj\git10\cosplay_digital_gadget_page
-
-# 2. Dev-Server starten
-npm run dev
-
-# 3. Im Browser öffnen
-# http://localhost:3000
+### Schritt 2: In Index registrieren
+```typescript
+// src/lib/gadgets/index.ts
+import { myNewGadget } from './data/my-new-gadget'
 ```
 
-### Offene User-Aktionen (Firebase Console)
-1. Authentication → Email/Password aktivieren
-2. Authentication → Users → Admin-Account erstellen
-3. Firestore → Rules → Security Rules einfügen (Abschnitt 5.3)
+### Schritt 3: Optional - Thumbnail
+```
+public/gadgets/my-new-gadget/thumb.png
+```
 
 ---
 
-*Ende des Übergabeprotokolls*
+## 12. Styling (Tailwind Custom Classes)
+
+### Farben
+```typescript
+'cyber-dark': '#0a0a0f',
+'cyber-darker': '#050508',
+'cyber-accent': '#00ff88',
+'cyber-blue': '#00d4ff',
+'cyber-purple': '#bf00ff',
+'cyber-red': '#ff0055',
+```
+
+### Custom Classes
+```css
+.glow-green, .glow-blue    /* Glow-Effekte */
+.text-glow-green           /* Text mit Glow */
+.card-hover                /* Hover-Animation */
+.badge, .badge-stable, .badge-wip, .badge-tag
+```
+
+---
+
+## 13. Bekannte Einschränkungen
+
+1. **Apex-Domain nicht möglich:** `grinsel.online` (ohne www) funktioniert nicht, da Strato keine ALIAS-Records unterstützt. Nur `www.grinsel.online` ist aktiv.
+
+2. **TableCast Link extern:** Der Link zu TableCast VTT auf der Landing Page zeigt noch auf die Railway-URL. Falls TableCast eine eigene Domain bekommt, muss der Link aktualisiert werden.
+
+3. **i18n auf Root-Seiten:** Die Landing Page (`/`) und 404-Seite haben keine Sprachumschaltung (absichtlich einfach gehalten).
+
+---
+
+## 14. Rollback-Plan
+
+Falls etwas schiefgeht:
+
+```bash
+# Git zurücksetzen
+cd C:\Users\marcj\git10\cosplay_digital_gadget_page
+git reset --hard HEAD~1
+git push --force
+
+# Oder in Railway: vorheriges Deployment wiederherstellen
+```
+
+---
+
+## 15. Kontakt & Verwandte Projekte
+
+### Projekt-Owner
+- **User:** marcj
+- **Verzeichnis:** `C:\Users\marcj\git10\`
+
+### Verwandte Projekte
+- **grinsel_landing** - OBSOLET nach Integration
+  - Pfad: `C:\Users\marcj\git10\grinsel_landing`
+  - Status: Kann archiviert/gelöscht werden
+
+- **TableCast VTT**
+  - URL: https://git07-production.up.railway.app/
+  - Status: Separates Projekt
+
+---
+
+*Ende des Übergabeprotokolls - Session 2026-02-27*
