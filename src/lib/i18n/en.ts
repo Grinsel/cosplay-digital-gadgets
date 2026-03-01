@@ -112,12 +112,10 @@ export const en: Translations = {
       'Check checksums/signatures if possible.',
       'Only enable "Install unknown apps" when necessary and disable it afterwards.',
     ],
-    legalNote: 'Note: This text is a template. For legally secure formulations, you should have it reviewed by a lawyer.',
   },
 
   impressum: {
     title: 'Legal Notice',
-    placeholder: '(Placeholder – please fill in/replace)',
     section1Title: 'Information according to § 5 TMG',
     nameLabel: 'Name',
     addressLabel: 'Address',
@@ -125,14 +123,10 @@ export const en: Translations = {
     section2Title: 'Responsible for content according to § 55 Abs. 2 RStV/MStV',
     noteTitle: 'Note',
     noteText: 'This site is a private project for cosplay/roleplay simulations.',
-    fillInTitle: 'To fill in:',
-    fillInText1: 'In Germany, a legal notice is required for commercial websites and those with journalistic-editorial content. For purely private websites, it may be possible to do without.',
-    fillInText2: 'Replace the placeholders above with your real data before making the website public. If in doubt, consult a lawyer.',
   },
 
   privacy: {
     title: 'Privacy Policy',
-    placeholder: '(Placeholder – This page must be filled with a correct privacy policy before publication)',
     section1Title: '1. Controller',
     section1Text: 'Responsible for data processing on this website is:',
     section2Title: '2. Hosting',
@@ -152,7 +146,6 @@ export const en: Translations = {
     section5Text: 'APK downloads are provided either directly from this website or via external services (e.g., GitHub Releases). For external services, their privacy policies apply.',
     section6Title: '6. Your Rights',
     section6Text: 'You have the right to information, correction, deletion and restriction of processing of your personal data. Contact us via the contact details provided in the legal notice.',
-    legalNote: 'This template does not replace legal advice. For a legally compliant privacy policy, you should use a privacy policy generator or seek legal advice.',
   },
 
   footer: {

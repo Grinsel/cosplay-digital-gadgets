@@ -112,12 +112,10 @@ export const de: Translations = {
       'Prüfe nach Möglichkeit Prüfsummen/Signaturen.',
       'Aktiviere "Unbekannte Apps installieren" nur, wenn nötig, und deaktiviere es danach wieder.',
     ],
-    legalNote: 'Hinweis: Dieser Text ist eine Vorlage. Für rechtssichere Formulierungen – besonders in Deutschland – solltest du ihn ggf. juristisch prüfen lassen.',
   },
 
   impressum: {
     title: 'Impressum',
-    placeholder: '(Placeholder – bitte ausfüllen/ersetzen)',
     section1Title: 'Angaben gemäß § 5 TMG',
     nameLabel: 'Name',
     addressLabel: 'Anschrift',
@@ -125,14 +123,10 @@ export const de: Translations = {
     section2Title: 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV/MStV',
     noteTitle: 'Hinweis',
     noteText: 'Diese Seite ist ein privates Projekt für Cosplay/Roleplay-Simulationen.',
-    fillInTitle: 'Zum Ausfüllen:',
-    fillInText1: 'In Deutschland ist ein Impressum für gewerbliche Websites und solche mit journalistisch-redaktionellen Inhalten Pflicht. Für rein private Websites kann unter Umständen darauf verzichtet werden.',
-    fillInText2: 'Ersetze die Platzhalter oben mit deinen echten Daten, bevor du die Website öffentlich machst. Bei Unsicherheit konsultiere einen Rechtsanwalt.',
   },
 
   privacy: {
     title: 'Datenschutzerklärung',
-    placeholder: '(Placeholder – Diese Seite muss vor Veröffentlichung mit einer korrekten Datenschutzerklärung befüllt werden)',
     section1Title: '1. Verantwortlicher',
     section1Text: 'Verantwortlich für die Datenverarbeitung auf dieser Website ist:',
     section2Title: '2. Hosting',
@@ -152,7 +146,6 @@ export const de: Translations = {
     section5Text: 'APK-Downloads werden entweder direkt von dieser Website oder über externe Dienste (z.B. GitHub Releases) bereitgestellt. Bei externen Diensten gelten deren Datenschutzbestimmungen.',
     section6Title: '6. Deine Rechte',
     section6Text: 'Du hast das Recht auf Auskunft, Berichtigung, Löschung und Einschränkung der Verarbeitung deiner personenbezogenen Daten. Kontaktiere uns über die im Impressum angegebenen Kontaktdaten.',
-    legalNote: 'Diese Vorlage ersetzt keine rechtliche Beratung. Für eine rechtssichere Datenschutzerklärung solltest du einen Datenschutzgenerator nutzen oder rechtliche Beratung in Anspruch nehmen.',
   },
 
   footer: {

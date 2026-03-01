@@ -41,11 +41,6 @@ export default function DisclaimerPage() {
             </div>
           </Section>
 
-          <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-lg p-6 mt-8">
-            <p className="text-gray-400 text-sm">
-              <strong className="text-cyber-purple">Note:</strong> {t.disclaimer.legalNote}
-            </p>
-          </div>
         </div>
       </div>
     </div>

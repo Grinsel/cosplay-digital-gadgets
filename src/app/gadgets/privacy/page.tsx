@@ -74,11 +74,6 @@ export default function PrivacyPage() {
           </Section>
         </div>
 
-        <div className="bg-cyber-purple/10 border border-cyber-purple/30 rounded-lg p-6 mt-8">
-          <p className="text-gray-400 text-sm">
-            {t.privacy.legalNote}
-          </p>
-        </div>
       </div>
     </div>
   )

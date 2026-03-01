@@ -1,6 +1,6 @@
 'use client'
 
-import { memo } from 'react'
+import { memo, useState } from 'react'
 import Link from 'next/link'
 import { Gadget } from '@/lib/types'
 import { useTranslations } from '@/lib/i18n'
@@ -12,20 +12,47 @@ interface GadgetCardProps {
 
 export default memo(function GadgetCard({ gadget }: GadgetCardProps) {
   const t = useTranslations()
+  const [videoLoaded, setVideoLoaded] = useState(false)
+  const videoId = gadget.youtube ? getVideoId(gadget.youtube) : null
 
   return (
     <article className="bg-cyber-darker border border-cyber-accent/20 rounded-lg overflow-hidden card-hover h-full flex flex-col">
-      {/* YouTube Short Video */}
-      {gadget.youtube && (
-        <div className="w-full aspect-[9/16] bg-black">
-          <iframe
-            src={`https://www.youtube.com/embed/${getVideoId(gadget.youtube)}`}
-            title={`${gadget.title} Demo`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            loading="lazy"
-            className="w-full h-full"
-          />
+      {/* YouTube Short Video - Lazy loaded on click */}
+      {videoId && (
+        <div className="w-full aspect-[9/16] bg-black relative">
+          {videoLoaded ? (
+            <iframe
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+              title={`${gadget.title} Demo`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          ) : (
+            <button
+              onClick={() => setVideoLoaded(true)}
+              className="w-full h-full relative group cursor-pointer"
+              aria-label={`Play ${gadget.title} video`}
+            >
+              {/* YouTube Thumbnail */}
+              <img
+                src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+                alt={`${gadget.title} thumbnail`}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
+              {/* Play button */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 bg-cyber-accent/90 rounded-full flex items-center justify-center group-hover:bg-cyber-accent group-hover:scale-110 transition-all">
+                  <svg className="w-8 h-8 text-cyber-dark ml-1" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          )}
         </div>
       )}
 

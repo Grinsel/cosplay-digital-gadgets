@@ -114,13 +114,11 @@ export interface Translations {
     section5Text: string
     section6Title: string
     section6List: string[]
-    legalNote: string
   }
 
   // Impressum Page
   impressum: {
     title: string
-    placeholder: string
     section1Title: string
     nameLabel: string
     addressLabel: string
@@ -128,15 +126,11 @@ export interface Translations {
     section2Title: string
     noteTitle: string
     noteText: string
-    fillInTitle: string
-    fillInText1: string
-    fillInText2: string
   }
 
   // Privacy Page
   privacy: {
     title: string
-    placeholder: string
     section1Title: string
     section1Text: string
     section2Title: string
@@ -152,7 +146,6 @@ export interface Translations {
     section5Text: string
     section6Title: string
     section6Text: string
-    legalNote: string
   }
 
   // Footer
