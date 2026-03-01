@@ -37,7 +37,7 @@
     "download": {
       "type": "external",
       "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/alien-motion-tracker.apk",
-      "version": "1.0"
+      "version": "1.1"
     },
     "credits": {
       "en": "Inspired by classic 80s sci-fi movies",
