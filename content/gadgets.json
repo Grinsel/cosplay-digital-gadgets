@@ -299,6 +299,10 @@
         "de": "Option: nur bei gesperrtem Bildschirm zeigen"
       },
       {
+        "en": "Runs on Android 8.0 and newer",
+        "de": "Läuft ab Android 8.0"
+      },
+      {
         "en": "No internet access, no ads, no data collection",
         "de": "Kein Internetzugriff, keine Werbung, keine Datenerfassung"
       }
@@ -328,7 +332,7 @@
     "download": {
       "type": "external",
       "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/rain-charge.apk",
-      "version": "0.1"
+      "version": "0.2"
     },
     "credits": {
       "en": "Inspired by sci-fi and fantasy classics",
