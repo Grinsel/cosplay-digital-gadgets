@@ -299,6 +299,14 @@
         "de": "Option: nur bei gesperrtem Bildschirm zeigen"
       },
       {
+        "en": "Permanent display: run any animation as a digital picture at a charge level of your choice",
+        "de": "Daueranzeige: jede Animation als digitales Bild mit frei wählbarem Ladestand"
+      },
+      {
+        "en": "Portrait and landscape, on phones and tablets",
+        "de": "Hochkant und quer, auf Handy und Tablet"
+      },
+      {
         "en": "Runs on Android 8.0 and newer",
         "de": "Läuft ab Android 8.0"
       },
@@ -325,6 +333,10 @@
         "de": "„Vorschau“ oder „Demo“ ausprobieren, dann das Kabel einstecken"
       },
       {
+        "en": "Permanent display: tap the third button, choose a level; Back closes it",
+        "de": "Daueranzeige: dritten Knopf antippen, Ladestand wählen; „Zurück“ beendet sie"
+      },
+      {
         "en": "Tap the animation to close it",
         "de": "Animation antippen, um sie zu schließen"
       }
@@ -332,7 +344,7 @@
     "download": {
       "type": "external",
       "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/rain-charge.apk",
-      "version": "0.2"
+      "version": "0.3"
     },
     "credits": {
       "en": "Inspired by sci-fi and fantasy classics",
