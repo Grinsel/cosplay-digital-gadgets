@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Providers from '@/components/Providers'
+import { SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Cosplay Digital Gadgets',
     description: 'Free interactive prop apps for conventions, photoshoots and live roleplay. Motion trackers, scanners, hacking terminals and more.',
-    url: 'https://grinsel.online/gadgets',
+    url: `${SITE_URL}/gadgets/`,
     siteName: 'Cosplay Digital Gadgets',
     locale: 'en_US',
     type: 'website',
@@ -22,9 +23,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Cosplay Digital Gadgets',
     description: 'Free Android gadget apps for cosplay & roleplay',
-  },
-  alternates: {
-    canonical: 'https://grinsel.online/gadgets',
   },
 }
 

@@ -44,11 +44,10 @@ export default function GadgetsPage() {
 
     // Sort
     result = [...result].sort((a, b) => {
-      if (sortBy === 'title') {
-        return a.title.localeCompare(b.title)
-      } else {
+      if (sortBy === 'status' && a.status !== b.status) {
         return a.status === 'stable' ? -1 : 1
       }
+      return a.title.localeCompare(b.title)
     })
 
     return result

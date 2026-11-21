@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://grinsel.online'),
+  metadataBase: new URL(SITE_URL),
+  // every page names itself as the canonical address
+  alternates: { canonical: './' },
   title: {
     default: 'Grinsel - Digital Projects',
     template: '%s | Grinsel',
@@ -15,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Grinsel - Digital Projects',
     description: 'Digital projects by Marc Schmelzer - Apps, tools and creative software',
-    url: 'https://grinsel.online',
+    url: SITE_URL,
     siteName: 'Grinsel',
     images: [{ url: '/og_image.png', width: 1200, height: 630 }],
     locale: 'en_US',

@@ -57,7 +57,7 @@ export default memo(function GadgetCard({ gadget }: GadgetCardProps) {
       )}
 
       {/* Card Content */}
-      <Link href={`/gadgets/${gadget.id}`} className="flex flex-col flex-grow p-6">
+      <Link href={`/gadgets/${gadget.id}/`} className="group flex flex-col flex-grow p-6">
         {/* Header */}
         <div className="mb-4">
           <div className="flex items-start justify-between gap-2 mb-2">

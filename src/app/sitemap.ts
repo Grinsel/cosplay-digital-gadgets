@@ -1,49 +1,50 @@
 import { MetadataRoute } from 'next'
 import { getAllGadgetIds } from '@/lib/gadgets'
+import { SITE_URL } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://grinsel.online'
+  const baseUrl = SITE_URL
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: `${baseUrl}/gadgets`,
+      url: `${baseUrl}/gadgets/`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/gadgets/ideas`,
+      url: `${baseUrl}/gadgets/ideas/`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/gadgets/support`,
+      url: `${baseUrl}/gadgets/support/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/gadgets/disclaimer`,
+      url: `${baseUrl}/gadgets/disclaimer/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/gadgets/impressum`,
+      url: `${baseUrl}/gadgets/impressum/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/gadgets/privacy`,
+      url: `${baseUrl}/gadgets/privacy/`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.3,
@@ -53,7 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Dynamic gadget pages
   const gadgetIds = getAllGadgetIds()
   const gadgetPages: MetadataRoute.Sitemap = gadgetIds.map((id) => ({
-    url: `${baseUrl}/gadgets/${id}`,
+    url: `${baseUrl}/gadgets/${id}/`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,

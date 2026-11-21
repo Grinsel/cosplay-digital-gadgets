@@ -32,33 +32,28 @@ export default function DownloadButton({ gadgetId, downloadUrl, version }: Props
     return () => unsubscribe()
   }, [gadgetId])
 
-  const handleDownload = async () => {
+  // The link itself starts the download; counting runs alongside and never holds it up.
+  const handleDownload = () => {
     setIsDownloading(true)
-
-    // Increment counter (don't block download if this fails)
-    try {
-      await incrementDownloadCount(gadgetId)
-    } catch (error) {
+    incrementDownloadCount(gadgetId).catch((error) => {
       console.error('Failed to increment download count:', error)
-    }
-
-    // Open download in new tab
-    window.open(downloadUrl, '_blank')
-
-    setTimeout(() => setIsDownloading(false), 1000)
+    })
+    setTimeout(() => setIsDownloading(false), 1500)
   }
 
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-        <button
+        <a
+          href={downloadUrl}
+          download
+          rel="noopener"
           onClick={handleDownload}
-          disabled={isDownloading}
-          className="px-6 py-3 bg-cyber-accent text-cyber-dark font-bold rounded-lg hover:bg-cyber-accent/90 transition-all hover:scale-105 glow-green inline-flex items-center gap-2 disabled:opacity-70 disabled:cursor-wait"
+          className="px-6 py-3 bg-cyber-accent text-cyber-dark font-bold rounded-lg hover:bg-cyber-accent/90 transition-all hover:scale-105 glow-green inline-flex items-center gap-2"
         >
           <span>{isDownloading ? '⏳' : '📥'}</span>
           {t.gadgetDetail.downloadApk}
-        </button>
+        </a>
 
         <div className="text-sm text-gray-400 flex items-center gap-4">
           {version && <span>Version {version}</span>}
