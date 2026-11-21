@@ -259,7 +259,7 @@
       "en": "Animated Charging Screens",
       "de": "Animierte Ladebildschirme"
     },
-    "status": "wip",
+    "status": "stable",
     "tags": ["charging", "animation", "matrix", "fantasy", "cyberpunk"],
     "shortDescription": {
       "en": "Replaces the plain charging screen with five full-screen animations that show the real battery level: digital rain, a tactical terminal, a neon tower, a magic book and a glowing rune.",

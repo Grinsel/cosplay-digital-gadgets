@@ -240,7 +240,7 @@ service cloud.firestore {
 | nod-ops-device | NOD OPS Field Device | stable |
 | predator-countdown | Predator Countdown | stable |
 | tactical-scanner | Tactical Scanner | stable |
-| rain-charge | Rain Charge | wip |
+| rain-charge | Rain Charge | stable |
 
 ---
 
