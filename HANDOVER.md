@@ -5,6 +5,12 @@
 **Projekt:** Cosplay Digital Gadget Page + Grinsel Landing (integriert)
 **Status:** Produktionsbereit
 
+> **Stand 21.11.2026:** Der aktuelle Einstieg ist `README.md` (Aufbau, Apps aktualisieren
+> und hinzufügen, Download-Weg). Dieses Protokoll bleibt als Verlauf und für die Details zu
+> Hosting, DNS und Firebase. Überholt sind hier der Verzeichnisbaum unter `src/lib/` in
+> Abschnitt 3 (die Apps stehen in `content/gadgets.json`, gelesen von `src/lib/gadgets.ts`;
+> eine Route `api/download` gibt es nicht mehr) und die Liste in Abschnitt 9.
+
 ---
 
 ## CHANGELOG Session 2026-02-27
@@ -305,28 +311,8 @@ http://localhost:3000/gadgets/  # Gadgets
 
 ## 11. Neues Gadget hinzufügen
 
-### Schritt 1: Datendatei erstellen
-```typescript
-// src/lib/gadgets/data/my-new-gadget.ts
-import { Gadget } from '../types'
-
-export const myNewGadget: Gadget = {
-  id: 'my-new-gadget',
-  en: { /* ... */ },
-  de: { /* ... */ }
-}
-```
-
-### Schritt 2: In Index registrieren
-```typescript
-// src/lib/gadgets/index.ts
-import { myNewGadget } from './data/my-new-gadget'
-```
-
-### Schritt 3: Optional - Thumbnail
-```
-public/gadgets/my-new-gadget/thumb.png
-```
+Siehe `README.md`, Abschnitte „Eine App aktualisieren“ und „Eine neue App hinzufügen“:
+APK nach `public/apk/<id>.apk`, Eintrag in `content/gadgets.json`, bauen, pushen.
 
 ---
 
@@ -394,4 +380,4 @@ git push --force
 
 ---
 
-*Ende des Übergabeprotokolls - Session 2026-02-27*
+*Ende des Übergabeprotokolls - Session 2026-02-27, Hinweise ergänzt am 21.11.2026*

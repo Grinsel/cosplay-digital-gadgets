@@ -1,174 +1,130 @@
-# Cosplay Digital Gadgets Website
+# grinsel.online – Website der Cosplay Digital Gadgets
 
-Eine Showcase-Website für Cosplay/Roleplay Gadget-Apps mit APK-Downloads, YouTube-Demos und detaillierten Beschreibungen.
+Stand: 21.11.2026.
 
-## Tech-Stack
+Die Website <https://www.grinsel.online> zeigt Android-Apps für Cosplay und Rollenspiel, jeweils
+mit Beschreibung, Video und APK-Download. Sie ist zweisprachig (Deutsch/Englisch).
 
-- **Framework:** Next.js 14 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Deployment:** Static Export (Vercel/Netlify kompatibel)
+| | |
+|---|---|
+| Ordner | `C:\Users\marcj\git10\cosplay_digital_gadget_page` |
+| GitHub | `Grinsel/cosplay-digital-gadgets`, Branch `master` (öffentlich) |
+| Hosting | Railway, Dienst `cosplay-digital-gadgets` |
+| Adresse | `https://www.grinsel.online` (nur mit `www`) |
+| Technik | Next.js 14 (App Router), TypeScript, Tailwind CSS, Firebase |
 
-## Setup & Entwicklung
+**Jeder Push auf `master` wird von Railway automatisch gebaut und ist nach etwa einer bis drei
+Minuten öffentlich.** Es gibt keine Zwischenstufe.
 
-### Voraussetzungen
+Weitere Dokumente: `HANDOVER.md` (Verlauf und Hosting-Details aus dem Februar 2026),
+`docs/ARCHITECTURE.md`, `docs/CONTRIBUTING.md`, `TEMPLATE_REMOVALS.md`.
 
-- Node.js 18+
-- npm oder yarn
+## Die Apps auf der Seite
 
-### Installation
+| ID | Titel | Version |
+|---|---|---|
+| `alien-motion-tracker` | Motion Tracker | 1.1 |
+| `cyberpunk-hacker` | Cyberpunk Hacker | 1.0 |
+| `nod-ops-device` | NOD OPS Field Device | 1.0 |
+| `predator-countdown` | Predator Countdown | 1.0 |
+| `tactical-scanner` | Tactical Scanner | 2.0 |
+| `rain-charge` | Rain Charge (animierte Ladebildschirme) | 0.3 |
 
-```bash
-# Dependencies installieren
+Rain Charge hat als einzige App noch kein Video. Ihr Quelltext liegt in
+`C:\Users\marcj\git10\rain_charge` (eigene `README.md`).
+
+## Lokal starten und bauen
+
+```
 npm install
-
-# Entwicklungsserver starten
-npm run dev
+npm run dev        (http://localhost:3000)
+npm run build      (Prüfung vor jedem Push)
 ```
 
-Die Website ist dann unter `http://localhost:3000` erreichbar.
-
-### Build
-
-```bash
-# Produktions-Build erstellen
-npm run build
-
-# Build lokal testen
-npm run start
-```
-
-Der Static Export liegt dann im `out/` Verzeichnis.
-
-## Struktur
+## Aufbau
 
 ```
-├── content/
-│   └── gadgets.json          # Alle Gadget-Daten
-├── public/
-│   └── apks/                 # Lokale APK-Dateien (optional)
-├── src/
-│   ├── app/                  # Next.js App Router Pages
-│   │   ├── page.tsx          # Landing Page
-│   │   ├── gadgets/          # Galerie & Detail-Seiten
-│   │   ├── support/          # Spenden-Seite
-│   │   ├── disclaimer/       # Haftungsausschluss
-│   │   ├── impressum/        # Impressum
-│   │   └── privacy/          # Datenschutz
-│   ├── components/           # React-Komponenten
-│   └── lib/                  # Utilities & Types
-└── tailwind.config.ts        # Tailwind-Konfiguration
+content/gadgets.json        alle Apps: Texte (de/en), Tags, Video, Download
+public/apk/                 die APK-Dateien
+public/icon.svg, og_image.png
+src/app/page.tsx            Startseite
+src/app/gadgets/            Übersicht, Detailseite [id], Ideen, Support, Disclaimer,
+                            Impressum, Datenschutz, Verwaltung der Kommentare
+src/app/sitemap.ts, robots.ts
+src/components/             Kopf, Fuß, Karten, Download-Knopf, Kommentare
+src/lib/gadgets.ts          liest gadgets.json und löst die Sprache auf
+src/lib/types.ts            Datenformat einer App
+src/lib/site.ts             SITE_URL, die einzige Stelle für die öffentliche Adresse
+src/lib/i18n/               Oberflächentexte de/en
+src/lib/firebase.ts, comments.ts, downloads.ts
+templates/                  Vorlagen für neue Einträge und Seiten
 ```
 
-## Neues Gadget hinzufügen
+Der Ordner `public/apks/` (mit s) ist leer und wird nicht benutzt.
 
-1. Öffne `content/gadgets.json`
-2. Füge ein neues Objekt hinzu:
+## Eine App aktualisieren
+
+1. Die neue APK nach `public/apk/<id>.apk` kopieren. Sie überschreibt die alte; es wird immer nur
+   eine Version angeboten.
+2. In `content/gadgets.json` beim Eintrag die `download.version` hochsetzen und bei Bedarf
+   `features` und `howToUse` anpassen (immer `de` und `en`).
+3. `npm run build`.
+4. Committen und `git push origin master`.
+5. Nach dem Deploy prüfen: die Detailseite zeigt die neue Version, und der Download liefert die
+   neue Datei.
+
+## Eine neue App hinzufügen
+
+1. APK nach `public/apk/<id>.apk`.
+2. In `content/gadgets.json` einen Eintrag anfügen (Vorlage: `templates/gadget-template.json`,
+   Format: `src/lib/types.ts`):
 
 ```json
 {
-  "id": "mein-gadget",
-  "title": "Mein Gadget",
-  "subtitle": "Kurze Beschreibung",
+  "id": "meine-app",
+  "title": "Meine App",
+  "subtitle": { "en": "…", "de": "…" },
   "status": "stable",
-  "tags": ["scanner", "sci-fi"],
-  "shortDescription": "1-2 Sätze für die Kartenansicht",
-  "longDescription": "Ausführliche Beschreibung für die Detailseite...",
-  "features": [
-    "Feature 1",
-    "Feature 2"
-  ],
-  "howToUse": [
-    "Schritt 1",
-    "Schritt 2"
-  ],
-  "youtube": "VIDEO_ID_ODER_URL",
+  "tags": ["scanner"],
+  "shortDescription": { "en": "…", "de": "…" },
+  "longDescription": { "en": "…", "de": "…" },
+  "features": [{ "en": "…", "de": "…" }],
+  "howToUse": [{ "en": "…", "de": "…" }],
+  "youtube": "VIDEO_ID",
   "download": {
     "type": "external",
-    "apkUrl": "https://github.com/.../releases/download/.../app.apk",
+    "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/meine-app.apk",
     "version": "1.0"
   },
-  "permissions": ["WAKE_LOCK", "VIBRATE"]
+  "permissions": ["WAKE_LOCK"]
 }
 ```
 
-## APK-Hosting
+   `status` ist `stable` oder `wip`. `youtube`, `credits`, `disclaimerNotes` und `permissions`
+   sind freiwillig.
+3. Bauen, committen, pushen wie oben. Detailseite und Sitemap entstehen aus dem Eintrag von
+   selbst.
 
-### Option 1: Externe Links (empfohlen)
+## Wie der Download funktioniert
 
-Verwende GitHub Releases oder einen anderen CDN:
+Die Download-Links zeigen auf die Rohdatei im GitHub-Repo (`…/raw/master/public/apk/<id>.apk`),
+nicht auf Railway. Eine neue APK ist deshalb sofort nach dem Push abrufbar, auch bevor der Deploy
+fertig ist. Das Repo muss dafür öffentlich bleiben.
 
-```json
-"download": {
-  "type": "external",
-  "apkUrl": "https://github.com/user/repo/releases/download/v1.0/app.apk",
-  "version": "1.0"
-}
-```
+Der Download-Knopf zählt jeden Klick in Firebase (Sammlung `downloads`). Kommentare liegen in der
+Sammlung `comments` und werden über die Verwaltungsseite moderiert. Firebase-Projekt:
+`cosplay-gadgets-comments`; die Zugriffsregeln stehen in `HANDOVER.md`, Abschnitt 6.
 
-**Vorteile:**
-- Repository bleibt klein
-- Bessere Download-Geschwindigkeit
-- Versionierung über Releases
+## Bekannte Grenzen
 
-### Option 2: Lokale Dateien
+- **Nur `www`:** `grinsel.online` ohne `www` funktioniert nicht (Strato kennt keine
+  ALIAS-Einträge). Absolute Adressen im Code kommen deshalb nur aus `src/lib/site.ts`.
+- **Alte APKs in der Git-Geschichte:** Jede APK-Version bleibt in der Versionsgeschichte und lässt
+  das Repo wachsen (derzeit rund 60 MB an aktuellen APKs).
+- **Debug-signierte Apps:** Die APKs sind Test-Builds für Freunde, nicht für den Play Store.
+- **Startseite und 404-Seite** haben keine Sprachumschaltung.
 
-Lege APKs in `public/apks/`:
+## Rechtliches
 
-```json
-"download": {
-  "type": "local",
-  "apkPath": "/apks/mein-gadget.apk",
-  "version": "1.0"
-}
-```
-
-**Hinweis:** Große Dateien (>50MB) sollten via Git LFS oder extern gehostet werden.
-
-## Deployment
-
-### Vercel (empfohlen)
-
-1. Repository auf GitHub pushen
-2. Bei Vercel importieren
-3. Automatisches Deployment bei Push
-
-### Netlify
-
-1. Repository auf GitHub pushen
-2. Bei Netlify importieren
-3. Build Command: `npm run build`
-4. Publish Directory: `out`
-
-### Manuell
-
-```bash
-npm run build
-# Upload des 'out' Verzeichnisses zu beliebigem Static Host
-```
-
-## Anpassungen
-
-### Farben
-
-Die Cyber-Farben sind in `tailwind.config.ts` definiert:
-
-```ts
-colors: {
-  'cyber-dark': '#0a0a0f',
-  'cyber-accent': '#00ff88',
-  'cyber-blue': '#00d4ff',
-  // ...
-}
-```
-
-### Rechtliche Seiten
-
-Ersetze die Platzhalter in:
-- `/src/app/impressum/page.tsx`
-- `/src/app/privacy/page.tsx`
-- `/src/app/support/page.tsx` (Spenden-Links)
-
-## Lizenz
-
-Private Nutzung. Apps sind Fan-Projekte ohne offizielle Verbindung zu Rechteinhabern.
+Die Apps sind Fan-Projekte ohne offizielle Verbindung zu den Rechteinhabern. Impressum,
+Datenschutz und Disclaimer liegen unter `src/app/gadgets/`.
