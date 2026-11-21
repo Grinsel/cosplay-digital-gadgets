@@ -235,11 +235,12 @@ service cloud.firestore {
 
 | ID | Name | Status |
 |----|------|--------|
-| alien-motion-tracker | Alien Motion Tracker | stable |
-| cyberpunk-hacker | Cyberpunk Hacker Terminal | stable |
-| nod-ops-device | NOD Ops Device | wip |
-| fallout-pip-boy | Fallout Pip-Boy | wip |
-| star-trek-tricorder | Star Trek Tricorder | wip |
+| alien-motion-tracker | Motion Tracker | stable |
+| cyberpunk-hacker | Cyberpunk Hacker | stable |
+| nod-ops-device | NOD OPS Field Device | stable |
+| predator-countdown | Predator Countdown | stable |
+| tactical-scanner | Tactical Scanner | stable |
+| rain-charge | Rain Charge | wip |
 
 ---
 

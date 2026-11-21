@@ -251,5 +251,93 @@
       "de": "Komplett offline, keine echte Scan-Funktionalität"
     },
     "permissions": ["WAKE_LOCK", "VIBRATE"]
+  },
+  {
+    "id": "rain-charge",
+    "title": "Rain Charge",
+    "subtitle": {
+      "en": "Animated Charging Screens",
+      "de": "Animierte Ladebildschirme"
+    },
+    "status": "wip",
+    "tags": ["charging", "animation", "matrix", "fantasy", "cyberpunk"],
+    "shortDescription": {
+      "en": "Replaces the plain charging screen with five full-screen animations that show the real battery level: digital rain, a tactical terminal, a neon tower, a magic book and a glowing rune.",
+      "de": "Ersetzt den schlichten Ladebildschirm durch fünf Vollbild-Animationen, die den echten Akkustand zeigen: digitaler Regen, taktisches Terminal, Neon-Hochhaus, magisches Buch und leuchtende Rune."
+    },
+    "longDescription": {
+      "en": "Rain Charge shows a full-screen animation as soon as you plug in the charging cable, also over the lock screen. Every animation is a charge display in its own right: the rain fills the screen from the bottom, the tower lights up floor by floor, the book turns one page per percent, the rune fills with blue energy. Pick your favourite in the app; a tap closes the animation.",
+      "de": "Rain Charge zeigt eine Vollbild-Animation, sobald du das Ladekabel einsteckst, auch über dem Sperrbildschirm. Jede Animation ist selbst die Ladeanzeige: Der Regen füllt den Bildschirm von unten, das Hochhaus leuchtet Stockwerk für Stockwerk auf, das Buch blättert pro Prozent eine Seite um, die Rune füllt sich mit blauer Energie. Den Favoriten wählst du in der App; ein Tippen schließt die Animation."
+    },
+    "features": [
+      {
+        "en": "5 animations: Digital Rain, Nod Tactical Power Interface, Arasaka Tower, The Magic Book, Algiz Rune",
+        "de": "5 Animationen: Digitaler Regen, Nod Tactical Power Interface, Arasaka-Hochhaus, Das magische Buch, Algiz-Rune"
+      },
+      {
+        "en": "Every animation shows the real battery level",
+        "de": "Jede Animation zeigt den echten Akkustand"
+      },
+      {
+        "en": "Starts by itself when the cable is plugged in, also over the lock screen",
+        "de": "Startet von selbst beim Einstecken des Kabels, auch über dem Sperrbildschirm"
+      },
+      {
+        "en": "Magic Book: an unseen hand writes a page, each percent turns it",
+        "de": "Magisches Buch: Eine unsichtbare Hand schreibt eine Seite, jedes Prozent blättert um"
+      },
+      {
+        "en": "Demo mode: watch any animation run from 0 to 100 %",
+        "de": "Demo-Modus: jede Animation im Durchlauf von 0 bis 100 % ansehen"
+      },
+      {
+        "en": "Screen-on time selectable: 15, 30, 60 or 120 seconds",
+        "de": "Anzeigedauer wählbar: 15, 30, 60 oder 120 Sekunden"
+      },
+      {
+        "en": "Option: show only while the screen is locked",
+        "de": "Option: nur bei gesperrtem Bildschirm zeigen"
+      },
+      {
+        "en": "No internet access, no ads, no data collection",
+        "de": "Kein Internetzugriff, keine Werbung, keine Datenerfassung"
+      }
+    ],
+    "howToUse": [
+      {
+        "en": "Open the app once after installing",
+        "de": "App nach der Installation einmal öffnen"
+      },
+      {
+        "en": "Tap both status lines until they show a green check: \"Display over other apps\" and the battery optimisation exemption",
+        "de": "Beide Statuszeilen antippen, bis sie einen grünen Haken zeigen: „Über anderen Apps einblenden“ und die Ausnahme von der Akku-Optimierung"
+      },
+      {
+        "en": "Choose an animation and how long the screen stays on",
+        "de": "Animation und Anzeigedauer wählen"
+      },
+      {
+        "en": "Try \"Preview\" or \"Demo\", then plug in the cable",
+        "de": "„Vorschau“ oder „Demo“ ausprobieren, dann das Kabel einstecken"
+      },
+      {
+        "en": "Tap the animation to close it",
+        "de": "Animation antippen, um sie zu schließen"
+      }
+    ],
+    "download": {
+      "type": "external",
+      "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/rain-charge.apk",
+      "version": "0.1"
+    },
+    "credits": {
+      "en": "Inspired by sci-fi and fantasy classics",
+      "de": "Inspiriert von Sci-Fi- und Fantasy-Klassikern"
+    },
+    "disclaimerNotes": {
+      "en": "Not an official product, pure fan project. Test build for friends: Samsung's own charging animation still flashes briefly before this one, and the menu is in German only.",
+      "de": "Kein offizielles Produkt, reines Fan-Projekt. Testversion für Freunde: Die Samsung-eigene Lade-Animation blitzt weiterhin kurz vorher auf, das Menü ist nur auf Deutsch."
+    },
+    "permissions": ["SYSTEM_ALERT_WINDOW", "FOREGROUND_SERVICE", "RECEIVE_BOOT_COMPLETED", "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS", "POST_NOTIFICATIONS"]
   }
 ]
