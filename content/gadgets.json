@@ -262,17 +262,17 @@
     "status": "stable",
     "tags": ["charging", "animation", "matrix", "fantasy", "cyberpunk"],
     "shortDescription": {
-      "en": "Replaces the plain charging screen with five full-screen animations that show the real battery level: digital rain, a tactical terminal, a neon tower, a magic book and a glowing rune.",
-      "de": "Ersetzt den schlichten Ladebildschirm durch fünf Vollbild-Animationen, die den echten Akkustand zeigen: digitaler Regen, taktisches Terminal, Neon-Hochhaus, magisches Buch und leuchtende Rune."
+      "en": "Replaces the plain charging screen with seven full-screen animations that show the real battery level: digital rain, a tactical terminal, a neon tower, a magic book, a glowing rune, a sword in the stone and a helmet HUD.",
+      "de": "Ersetzt den schlichten Ladebildschirm durch sieben Vollbild-Animationen, die den echten Akkustand zeigen: digitaler Regen, taktisches Terminal, Neon-Hochhaus, magisches Buch, leuchtende Rune, Schwert im Stein und Helm-HUD."
     },
     "longDescription": {
-      "en": "Rain Charge shows a full-screen animation as soon as you plug in the charging cable, also over the lock screen. Every animation is a charge display in its own right: the rain fills the screen from the bottom, the tower lights up floor by floor, the book turns one page per percent, the rune fills with blue energy. Pick your favourite in the app; a tap closes the animation.",
-      "de": "Rain Charge zeigt eine Vollbild-Animation, sobald du das Ladekabel einsteckst, auch über dem Sperrbildschirm. Jede Animation ist selbst die Ladeanzeige: Der Regen füllt den Bildschirm von unten, das Hochhaus leuchtet Stockwerk für Stockwerk auf, das Buch blättert pro Prozent eine Seite um, die Rune füllt sich mit blauer Energie. Den Favoriten wählst du in der App; ein Tippen schließt die Animation."
+      "en": "Rain Charge shows a full-screen animation as soon as you plug in the charging cable, also over the lock screen. Every animation is a charge display in its own right: the rain fills the screen from the bottom, the tower lights up floor by floor, the book turns one page per percent, the rune fills with blue energy, the sword charges from the stone upwards, the helmet HUD recharges its shield. Pick your favourite in the app; a tap closes the animation.",
+      "de": "Rain Charge zeigt eine Vollbild-Animation, sobald du das Ladekabel einsteckst, auch über dem Sperrbildschirm. Jede Animation ist selbst die Ladeanzeige: Der Regen füllt den Bildschirm von unten, das Hochhaus leuchtet Stockwerk für Stockwerk auf, das Buch blättert pro Prozent eine Seite um, die Rune füllt sich mit blauer Energie, das Schwert lädt sich vom Stein aus auf, das Helm-HUD lädt seinen Schild. Den Favoriten wählst du in der App; ein Tippen schließt die Animation."
     },
     "features": [
       {
-        "en": "5 animations: Digital Rain, Nod Tactical Power Interface, Arasaka Tower, The Magic Book, Algiz Rune",
-        "de": "5 Animationen: Digitaler Regen, Nod Tactical Power Interface, Arasaka-Hochhaus, Das magische Buch, Algiz-Rune"
+        "en": "7 animations: Digital Rain, Nod Tactical Power Interface, Arasaka Tower, The Magic Book, Algiz Rune, The Magic Sword, Spartan Energy HUD",
+        "de": "7 Animationen: Digitaler Regen, Nod Tactical Power Interface, Arasaka-Hochhaus, Das magische Buch, Algiz-Rune, Das magische Schwert, Spartan Energy HUD"
       },
       {
         "en": "Every animation shows the real battery level",
@@ -285,6 +285,14 @@
       {
         "en": "Magic Book: an unseen hand writes a page, each percent turns it",
         "de": "Magisches Buch: Eine unsichtbare Hand schreibt eine Seite, jedes Prozent blättert um"
+      },
+      {
+        "en": "Magic Sword: turquoise energy rises in the blade, at 100 % the whole sword is alight",
+        "de": "Magisches Schwert: Türkise Energie steigt in der Klinge auf, bei 100 % leuchtet das ganze Schwert"
+      },
+      {
+        "en": "Spartan Energy HUD: shield bar, ring and number show the charge inside a helmet visor",
+        "de": "Spartan Energy HUD: Schildbalken, Ring und Zahl zeigen die Ladung im Helmvisier"
       },
       {
         "en": "Demo mode: watch any animation run from 0 to 100 %",
@@ -325,6 +333,10 @@
         "de": "Beide Statuszeilen antippen, bis sie einen grünen Haken zeigen: „Über anderen Apps einblenden“ und die Ausnahme von der Akku-Optimierung"
       },
       {
+        "en": "If the switch stays grey (Pixel and others): open the app info, tap the three dots, allow restricted settings, then try again",
+        "de": "Bleibt der Schalter grau (Pixel und andere): App-Info öffnen, drei Punkte antippen, eingeschränkte Einstellungen zulassen, dann erneut versuchen"
+      },
+      {
         "en": "Choose an animation and how long the screen stays on",
         "de": "Animation und Anzeigedauer wählen"
       },
@@ -344,7 +356,7 @@
     "download": {
       "type": "external",
       "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/rain-charge.apk",
-      "version": "0.3"
+      "version": "0.5"
     },
     "credits": {
       "en": "Inspired by sci-fi and fantasy classics",
