@@ -7,7 +7,12 @@
       "de": "Sci-Fi Bewegungssensor im Retro-Style"
     },
     "status": "stable",
-    "tags": ["tracker", "scanner", "retro", "sensor"],
+    "tags": [
+      "tracker",
+      "scanner",
+      "retro",
+      "sensor"
+    ],
     "shortDescription": {
       "en": "An immersive motion sensor display in 80s sci-fi style with CRT effects, radar display and real step sensor.",
       "de": "Ein immersiver Bewegungssensor-Display im 80er-Jahre Sci-Fi Style mit CRT-Effekten, Radar-Anzeige und echtem Schrittsensor."
@@ -17,21 +22,60 @@
       "de": "Der Motion Tracker verwandelt dein Smartphone in ein authentisches Sci-Fi-Requisit. Mit animiertem Radar-Sweep, bis zu 8 gleichzeitigen Kontakt-Blips und echten CRT-Röhreneffekten wie Scanlines und Phosphor-Flicker. Besonderes Feature: Die App nutzt den Schrittsensor deines Geräts – wenn du weggehst, erhöht sich die Distanz zu den simulierten Kontakten. Perfekt für immersives Roleplay!"
     },
     "features": [
-      { "en": "Animated 120° radar sweep with fanning effect", "de": "Animierter 120° Radar-Sweep mit Fanning-Effekt" },
-      { "en": "Up to 8 simultaneous contact blips with ping/decay behavior", "de": "Bis zu 8 gleichzeitige Kontakt-Blips mit Ping/Decay-Verhalten" },
-      { "en": "Authentic CRT effects: Scanlines, vertical drift, phosphor flicker", "de": "Authentische CRT-Effekte: Scanlines, Vertical Drift, Phosphor-Flicker" },
-      { "en": "Real step sensor: Walking increases distance to contacts", "de": "Echter Schrittsensor: Gehen erhöht Distanz zu Kontakten" },
-      { "en": "Compass integration for direction-based display", "de": "Kompass-Integration für richtungsbasierte Anzeige" },
-      { "en": "Haptic feedback on each step", "de": "Haptisches Feedback bei jedem Schritt" },
-      { "en": "Show mode for fullscreen presentation", "de": "Show-Mode für Vollbild-Präsentation" },
-      { "en": "Adjustable effects and contact count", "de": "Einstellbare Effekte und Kontaktanzahl" }
+      {
+        "en": "Animated 120° radar sweep with fanning effect",
+        "de": "Animierter 120° Radar-Sweep mit Fanning-Effekt"
+      },
+      {
+        "en": "Up to 8 simultaneous contact blips with ping/decay behavior",
+        "de": "Bis zu 8 gleichzeitige Kontakt-Blips mit Ping/Decay-Verhalten"
+      },
+      {
+        "en": "Authentic CRT effects: Scanlines, vertical drift, phosphor flicker",
+        "de": "Authentische CRT-Effekte: Scanlines, Vertical Drift, Phosphor-Flicker"
+      },
+      {
+        "en": "Real step sensor: Walking increases distance to contacts",
+        "de": "Echter Schrittsensor: Gehen erhöht Distanz zu Kontakten"
+      },
+      {
+        "en": "Compass integration for direction-based display",
+        "de": "Kompass-Integration für richtungsbasierte Anzeige"
+      },
+      {
+        "en": "Haptic feedback on each step",
+        "de": "Haptisches Feedback bei jedem Schritt"
+      },
+      {
+        "en": "Show mode for fullscreen presentation",
+        "de": "Show-Mode für Vollbild-Präsentation"
+      },
+      {
+        "en": "Adjustable effects and contact count",
+        "de": "Einstellbare Effekte und Kontaktanzahl"
+      }
     ],
     "howToUse": [
-      { "en": "App starts directly in Show Mode (fullscreen tracker)", "de": "App startet direkt im Show Mode (Vollbild-Tracker)" },
-      { "en": "Tap in the scan area to place a contact", "de": "Tippe in den Scan-Bereich um einen Kontakt zu platzieren" },
-      { "en": "Long press: Toggle multi-contact mode", "de": "Langer Druck: Multi-Kontakt-Modus umschalten" },
-      { "en": "Long press top left: Return to main menu", "de": "Langer Druck oben links: Zurück zum Hauptmenü" },
-      { "en": "Walk around – step counting affects alien distance", "de": "Gehe umher – die Schrittzählung beeinflusst die Alien-Distanz" }
+      {
+        "en": "App starts directly in Show Mode (fullscreen tracker)",
+        "de": "App startet direkt im Show Mode (Vollbild-Tracker)"
+      },
+      {
+        "en": "Tap in the scan area to place a contact",
+        "de": "Tippe in den Scan-Bereich um einen Kontakt zu platzieren"
+      },
+      {
+        "en": "Long press: Toggle multi-contact mode",
+        "de": "Langer Druck: Multi-Kontakt-Modus umschalten"
+      },
+      {
+        "en": "Long press top left: Return to main menu",
+        "de": "Langer Druck oben links: Zurück zum Hauptmenü"
+      },
+      {
+        "en": "Walk around – step counting affects alien distance",
+        "de": "Gehe umher – die Schrittzählung beeinflusst die Alien-Distanz"
+      }
     ],
     "youtube": "7gZ-NVVBxEQ",
     "download": {
@@ -47,7 +91,11 @@
       "en": "Requires permissions for step counter and sensors",
       "de": "Benötigt Berechtigungen für Schrittzähler und Sensoren"
     },
-    "permissions": ["WAKE_LOCK", "ACTIVITY_RECOGNITION", "VIBRATE"]
+    "permissions": [
+      "WAKE_LOCK",
+      "ACTIVITY_RECOGNITION",
+      "VIBRATE"
+    ]
   },
   {
     "id": "cyberpunk-hacker",
@@ -57,7 +105,12 @@
       "de": "Futuristisches Hacking-Terminal"
     },
     "status": "stable",
-    "tags": ["hacking", "terminal", "cyberpunk", "console"],
+    "tags": [
+      "hacking",
+      "terminal",
+      "cyberpunk",
+      "console"
+    ],
     "shortDescription": {
       "en": "An immersive hacking terminal with matrix input, console mode and 6 cyberpunk color themes. Perfect for tech cosplays.",
       "de": "Ein immersives Hacking-Terminal mit Matrix-Eingabe, Konsolen-Modus und 6 Cyberpunk-Farbthemen. Perfekt für Tech-Cosplays."
@@ -67,21 +120,60 @@
       "de": "Cyberpunk Hacker simuliert ein futuristisches Hacking-Interface mit zwei Eingabemodi: Der Matrix-Modus bietet ein 4x5 Hex-Token-Grid zur Code-Eingabe, während der Konsolen-Modus eine vollständige Terminal-Oberfläche mit Quick-Commands bietet. Besonderes Feature: Deterministische Ausgabe – die gleiche Eingabe erzeugt immer das gleiche Ergebnis, perfekt für eingeübte Live-Demos!"
     },
     "features": [
-      { "en": "Matrix mode: 4x5 hex token grid with 6-token buffer", "de": "Matrix-Modus: 4x5 Hex-Token Grid mit 6-Token Buffer" },
-      { "en": "Console mode: Custom keyboard with quick commands", "de": "Konsolen-Modus: Custom Keyboard mit Quick-Commands" },
-      { "en": "Deterministic output (SHA-256 seeded) for repeatable demos", "de": "Deterministische Ausgabe (SHA-256 seeded) für wiederholbare Demos" },
-      { "en": "6 color themes: Matrix, ICE, Daemon, Solar, Neon, Azure", "de": "6 Farbthemen: Matrix, ICE, Daemon, Solar, Neon, Azure" },
-      { "en": "Scanlines, glitch effects and grid overlays", "de": "Scanlines, Glitch-Effekte und Grid-Overlays" },
-      { "en": "Multi-stage hack simulation (Init, Scan, Bypass, Decrypt, Inject)", "de": "Mehrstufige Hack-Simulation (Init, Scan, Bypass, Decrypt, Inject)" },
-      { "en": "Fullscreen show mode without UI distractions", "de": "Vollbild Show-Mode ohne UI-Störungen" },
-      { "en": "Screen stays active during show mode", "de": "Screen bleibt während Show-Mode aktiv" }
+      {
+        "en": "Matrix mode: 4x5 hex token grid with 6-token buffer",
+        "de": "Matrix-Modus: 4x5 Hex-Token Grid mit 6-Token Buffer"
+      },
+      {
+        "en": "Console mode: Custom keyboard with quick commands",
+        "de": "Konsolen-Modus: Custom Keyboard mit Quick-Commands"
+      },
+      {
+        "en": "Deterministic output (SHA-256 seeded) for repeatable demos",
+        "de": "Deterministische Ausgabe (SHA-256 seeded) für wiederholbare Demos"
+      },
+      {
+        "en": "6 color themes: Matrix, ICE, Daemon, Solar, Neon, Azure",
+        "de": "6 Farbthemen: Matrix, ICE, Daemon, Solar, Neon, Azure"
+      },
+      {
+        "en": "Scanlines, glitch effects and grid overlays",
+        "de": "Scanlines, Glitch-Effekte und Grid-Overlays"
+      },
+      {
+        "en": "Multi-stage hack simulation (Init, Scan, Bypass, Decrypt, Inject)",
+        "de": "Mehrstufige Hack-Simulation (Init, Scan, Bypass, Decrypt, Inject)"
+      },
+      {
+        "en": "Fullscreen show mode without UI distractions",
+        "de": "Vollbild Show-Mode ohne UI-Störungen"
+      },
+      {
+        "en": "Screen stays active during show mode",
+        "de": "Screen bleibt während Show-Mode aktiv"
+      }
     ],
     "howToUse": [
-      { "en": "App starts in Show Mode", "de": "App startet im Show Mode" },
-      { "en": "Matrix: Tap tokens to fill buffer → Output is generated", "de": "Matrix: Tippe Tokens um den Buffer zu füllen → Output wird generiert" },
-      { "en": "Console: Tap commands or use quick buttons (SCAN, PROBE, INJECT...)", "de": "Console: Tippe Commands oder nutze Quick-Buttons (SCAN, PROBE, INJECT...)" },
-      { "en": "MENU button top right for color selection and navigation", "de": "MENU-Button oben rechts für Farbauswahl und Navigation" },
-      { "en": "Same input = Same output for rehearsed presentations", "de": "Gleiche Eingabe = Gleiche Ausgabe für einstudierte Präsentationen" }
+      {
+        "en": "App starts in Show Mode",
+        "de": "App startet im Show Mode"
+      },
+      {
+        "en": "Matrix: Tap tokens to fill buffer → Output is generated",
+        "de": "Matrix: Tippe Tokens um den Buffer zu füllen → Output wird generiert"
+      },
+      {
+        "en": "Console: Tap commands or use quick buttons (SCAN, PROBE, INJECT...)",
+        "de": "Console: Tippe Commands oder nutze Quick-Buttons (SCAN, PROBE, INJECT...)"
+      },
+      {
+        "en": "MENU button top right for color selection and navigation",
+        "de": "MENU-Button oben rechts für Farbauswahl und Navigation"
+      },
+      {
+        "en": "Same input = Same output for rehearsed presentations",
+        "de": "Gleiche Eingabe = Gleiche Ausgabe für einstudierte Präsentationen"
+      }
     ],
     "youtube": "_rI-QDH7kVg",
     "download": {
@@ -97,7 +189,9 @@
       "en": "Pure simulation without real network functions",
       "de": "Reine Simulation ohne echte Netzwerkfunktionen"
     },
-    "permissions": ["WAKE_LOCK"]
+    "permissions": [
+      "WAKE_LOCK"
+    ]
   },
   {
     "id": "nod-ops-device",
@@ -107,7 +201,13 @@
       "de": "Taktisches Mehrzweck-Interface"
     },
     "status": "stable",
-    "tags": ["tactical", "military", "scanner", "hacking", "multi-mode"],
+    "tags": [
+      "tactical",
+      "military",
+      "scanner",
+      "hacking",
+      "multi-mode"
+    ],
     "shortDescription": {
       "en": "A military-style tactical device with three modes: OPS (Tactical Uplink), SCAN (Field Scanner) and INFIL (Infiltration Console).",
       "de": "Ein militärisch anmutendes Taktik-Device mit drei Modi: OPS (Tactical Uplink), SCAN (Field Scanner) und INFIL (Infiltration Console)."
@@ -117,21 +217,60 @@
       "de": "Das NOD OPS Field Device ist ein vielseitiges Prop-Interface im dunklen Militär-Style mit rot/schwarz-Ästhetik. Drei spezialisierte Modi bieten unterschiedliche Funktionen: OPS zeigt ein taktisches Grid mit Kontakten und Befehlen, SCAN ermöglicht Radar-basierte Umgebungsanalyse, und INFIL präsentiert ein Cyberpunk-artiges Infiltrations-Terminal. Alle Modi nutzen einen deterministischen Engine für konsistentes Verhalten."
     },
     "features": [
-      { "en": "3 modes: OPS (Tactical), SCAN (Radar), INFIL (Hacking)", "de": "3 Modi: OPS (Tactical), SCAN (Radar), INFIL (Hacking)" },
-      { "en": "OPS: Tactical grid, contact markers, event log, commands", "de": "OPS: Taktisches Grid, Kontakt-Marker, Event-Log, Commands" },
-      { "en": "SCAN: Radar sweep, material analysis, risk assessment", "de": "SCAN: Radar-Sweep, Material-Analyse, Risk Assessment" },
-      { "en": "INFIL: Token matrix, progress bars, access level system", "de": "INFIL: Token-Matrix, Progress-Bars, Access-Level System" },
-      { "en": "CRT effects: Drift, scanlines, phosphor flicker, glitch", "de": "CRT-Effekte: Drift, Scanlines, Phosphor-Flicker, Glitch" },
-      { "en": "Auto-demo mode: Automatic mode switch every 15 seconds", "de": "Auto-Demo Mode: Automatischer Modus-Wechsel alle 15 Sekunden" },
-      { "en": "3 color themes: Red, Red+Green, Red+Cyan", "de": "3 Farbthemen: Red, Red+Green, Red+Cyan" },
-      { "en": "Adjustable animation speed", "de": "Einstellbare Animationsgeschwindigkeit" }
+      {
+        "en": "3 modes: OPS (Tactical), SCAN (Radar), INFIL (Hacking)",
+        "de": "3 Modi: OPS (Tactical), SCAN (Radar), INFIL (Hacking)"
+      },
+      {
+        "en": "OPS: Tactical grid, contact markers, event log, commands",
+        "de": "OPS: Taktisches Grid, Kontakt-Marker, Event-Log, Commands"
+      },
+      {
+        "en": "SCAN: Radar sweep, material analysis, risk assessment",
+        "de": "SCAN: Radar-Sweep, Material-Analyse, Risk Assessment"
+      },
+      {
+        "en": "INFIL: Token matrix, progress bars, access level system",
+        "de": "INFIL: Token-Matrix, Progress-Bars, Access-Level System"
+      },
+      {
+        "en": "CRT effects: Drift, scanlines, phosphor flicker, glitch",
+        "de": "CRT-Effekte: Drift, Scanlines, Phosphor-Flicker, Glitch"
+      },
+      {
+        "en": "Auto-demo mode: Automatic mode switch every 15 seconds",
+        "de": "Auto-Demo Mode: Automatischer Modus-Wechsel alle 15 Sekunden"
+      },
+      {
+        "en": "3 color themes: Red, Red+Green, Red+Cyan",
+        "de": "3 Farbthemen: Red, Red+Green, Red+Cyan"
+      },
+      {
+        "en": "Adjustable animation speed",
+        "de": "Einstellbare Animationsgeschwindigkeit"
+      }
     ],
     "howToUse": [
-      { "en": "Main menu: ENTER SHOW MODE for fullscreen presentation", "de": "Hauptmenü: ENTER SHOW MODE für Vollbild-Präsentation" },
-      { "en": "Tab bar at bottom switches between OPS, SCAN and INFIL", "de": "Tab-Leiste unten wechselt zwischen OPS, SCAN und INFIL" },
-      { "en": "Tap on grid/radar/matrix for interaction", "de": "Tippe auf Grid/Radar/Matrix für Interaktion" },
-      { "en": "Long press bottom right (2 sec): Exit show mode", "de": "Langer Druck unten rechts (2 Sek.): Show Mode beenden" },
-      { "en": "Settings: Adjust auto-demo, sounds, haptics, CRT effects", "de": "Settings: Auto-Demo, Sounds, Haptics, CRT-Effekte anpassen" }
+      {
+        "en": "Main menu: ENTER SHOW MODE for fullscreen presentation",
+        "de": "Hauptmenü: ENTER SHOW MODE für Vollbild-Präsentation"
+      },
+      {
+        "en": "Tab bar at bottom switches between OPS, SCAN and INFIL",
+        "de": "Tab-Leiste unten wechselt zwischen OPS, SCAN und INFIL"
+      },
+      {
+        "en": "Tap on grid/radar/matrix for interaction",
+        "de": "Tippe auf Grid/Radar/Matrix für Interaktion"
+      },
+      {
+        "en": "Long press bottom right (2 sec): Exit show mode",
+        "de": "Langer Druck unten rechts (2 Sek.): Show Mode beenden"
+      },
+      {
+        "en": "Settings: Adjust auto-demo, sounds, haptics, CRT effects",
+        "de": "Settings: Auto-Demo, Sounds, Haptics, CRT-Effekte anpassen"
+      }
     ],
     "youtube": "Q7J0v_aNFtI",
     "download": {
@@ -147,7 +286,9 @@
       "en": "Not an official product, pure fan project",
       "de": "Kein offizielles Produkt, reines Fan-Projekt"
     },
-    "permissions": ["VIBRATE"]
+    "permissions": [
+      "VIBRATE"
+    ]
   },
   {
     "id": "predator-countdown",
@@ -157,7 +298,12 @@
       "de": "Alien-Style Countdown Timer mit Live Wallpaper"
     },
     "status": "stable",
-    "tags": ["timer", "countdown", "wallpaper", "alarm"],
+    "tags": [
+      "timer",
+      "countdown",
+      "wallpaper",
+      "alarm"
+    ],
     "shortDescription": {
       "en": "A countdown timer with alien 10-segment digits, glow effects and live wallpaper function. Including alarm with sound effects.",
       "de": "Ein Countdown-Timer mit außerirdischen 10-Segment-Ziffern, Glow-Effekten und Live-Wallpaper Funktion. Inklusive Wecker mit Sound-Effekten."
@@ -167,23 +313,68 @@
       "de": "Der Predator Countdown zeigt die Zeit in einzigartigen 10-Segment Alien-Ziffern an – weit weg vom Standard 7-Segment LED-Look. Features wie pulsierender Glow, Glitch-Effekte und CRT-Scanlines sorgen für authentische Sci-Fi Atmosphäre. Die App funktioniert als Countdown zu einer einstellbaren Zielzeit, als normale Uhr, und als animiertes Live Wallpaper. Der integrierte Wecker spielt Sounds mit steigender Intensität ab."
     },
     "features": [
-      { "en": "Unique 10-segment alien digits (HH:MM:SS)", "de": "Einzigartige 10-Segment Alien-Ziffern (HH:MM:SS)" },
-      { "en": "Countdown to configurable detonation time", "de": "Countdown zu einstellbarer Detonationszeit" },
-      { "en": "Clock mode as alternative", "de": "Uhr-Modus als Alternative" },
-      { "en": "Animated live wallpaper (30 FPS, battery-efficient)", "de": "Animiertes Live Wallpaper (30 FPS, batterieschonend)" },
-      { "en": "8 color schemes: Red, Orange, Green, Cyan, Blue, Purple, Pink, White", "de": "8 Farbschemas: Red, Orange, Green, Cyan, Blue, Purple, Pink, White" },
-      { "en": "Alarm with accelerating sound effect", "de": "Wecker mit beschleunigendem Sound-Effekt" },
-      { "en": "Glitch effects intensify at countdown end", "de": "Glitch-Effekte verstärken sich bei Countdown-Ende" },
-      { "en": "Show mode with interactive alien button", "de": "Show Mode mit interaktivem Alien-Button" }
+      {
+        "en": "Unique 10-segment alien digits (HH:MM:SS)",
+        "de": "Einzigartige 10-Segment Alien-Ziffern (HH:MM:SS)"
+      },
+      {
+        "en": "Countdown to configurable detonation time",
+        "de": "Countdown zu einstellbarer Detonationszeit"
+      },
+      {
+        "en": "Clock mode as alternative",
+        "de": "Uhr-Modus als Alternative"
+      },
+      {
+        "en": "Animated live wallpaper (30 FPS, battery-efficient)",
+        "de": "Animiertes Live Wallpaper (30 FPS, batterieschonend)"
+      },
+      {
+        "en": "8 color schemes: Red, Orange, Green, Cyan, Blue, Purple, Pink, White",
+        "de": "8 Farbschemas: Red, Orange, Green, Cyan, Blue, Purple, Pink, White"
+      },
+      {
+        "en": "Alarm with accelerating sound effect",
+        "de": "Wecker mit beschleunigendem Sound-Effekt"
+      },
+      {
+        "en": "Glitch effects intensify at countdown end",
+        "de": "Glitch-Effekte verstärken sich bei Countdown-Ende"
+      },
+      {
+        "en": "Show mode with interactive alien button",
+        "de": "Show Mode mit interaktivem Alien-Button"
+      }
     ],
     "howToUse": [
-      { "en": "Settings: Choose countdown vs. clock mode", "de": "Settings: Countdown vs. Uhr-Modus wählen" },
-      { "en": "Set detonation time (00:00 - 23:59)", "de": "Detonationszeit einstellen (00:00 - 23:59)" },
-      { "en": "Select color scheme", "de": "Farbschema auswählen" },
-      { "en": "Show Mode: Tap alien button = 10 sec countdown", "de": "Show Mode: Tap auf Alien-Button = 10 Sek Countdown" },
-      { "en": "Show Mode: Drag up = Custom countdown (30-300 sec)", "de": "Show Mode: Drag nach oben = Custom Countdown (30-300 Sek)" },
-      { "en": "Long-press = Exit show mode", "de": "Long-Press = Show Mode beenden" },
-      { "en": "Set as wallpaper for permanent display", "de": "Als Wallpaper setzen für permanente Anzeige" }
+      {
+        "en": "Settings: Choose countdown vs. clock mode",
+        "de": "Settings: Countdown vs. Uhr-Modus wählen"
+      },
+      {
+        "en": "Set detonation time (00:00 - 23:59)",
+        "de": "Detonationszeit einstellen (00:00 - 23:59)"
+      },
+      {
+        "en": "Select color scheme",
+        "de": "Farbschema auswählen"
+      },
+      {
+        "en": "Show Mode: Tap alien button = 10 sec countdown",
+        "de": "Show Mode: Tap auf Alien-Button = 10 Sek Countdown"
+      },
+      {
+        "en": "Show Mode: Drag up = Custom countdown (30-300 sec)",
+        "de": "Show Mode: Drag nach oben = Custom Countdown (30-300 Sek)"
+      },
+      {
+        "en": "Long-press = Exit show mode",
+        "de": "Long-Press = Show Mode beenden"
+      },
+      {
+        "en": "Set as wallpaper for permanent display",
+        "de": "Als Wallpaper setzen für permanente Anzeige"
+      }
     ],
     "youtube": "plVm5GtOw7Y",
     "download": {
@@ -199,7 +390,12 @@
       "en": "Alarm function requires alarm permissions. Note battery usage with live wallpaper.",
       "de": "Wecker-Funktion benötigt Alarm-Berechtigungen. Batterieverbrauch bei Live Wallpaper beachten."
     },
-    "permissions": ["WAKE_LOCK", "SCHEDULE_EXACT_ALARM", "VIBRATE", "POST_NOTIFICATIONS"]
+    "permissions": [
+      "WAKE_LOCK",
+      "SCHEDULE_EXACT_ALARM",
+      "VIBRATE",
+      "POST_NOTIFICATIONS"
+    ]
   },
   {
     "id": "tactical-scanner",
@@ -209,7 +405,13 @@
       "de": "Von Star Wars inspirierter Boden-Scanner"
     },
     "status": "stable",
-    "tags": ["scanner", "tactical", "analysis", "wallpaper", "star-wars"],
+    "tags": [
+      "scanner",
+      "tactical",
+      "analysis",
+      "wallpaper",
+      "star-wars"
+    ],
     "shortDescription": {
       "en": "A Star Wars-inspired ground scanner with animated radar, 17+ visual layers and progressive 60-second deep analysis with technical readouts.",
       "de": "Ein von Star Wars inspirierter Ground Scanner mit animiertem Radar, 17+ visuellen Layern und progressiver 60-Sekunden Tiefenanalyse mit technischen Readouts."
@@ -219,22 +421,64 @@
       "de": "Der Tactical Scanner simuliert ein fortschrittliches Bodenanalyse-Gerät im Star Wars-Stil. 17+ Layer erzeugen eine realistische Sci-Fi Ästhetik mit sinusförmigen Wellen, rotierendem Radar-Cone und blinkenden Kontakt-Markern. Das Highlight: Der 60-Sekunden Deep Scan zeigt progressive technische Daten – von Terrain-Analyse über chemische Zusammensetzung bis zu Koordinaten und Anomalie-Erkennung. Alle Daten sind deterministisch: Gleiche Position = Gleiche Ergebnisse."
     },
     "features": [
-      { "en": "17+ visual layers with sci-fi aesthetics", "de": "17+ visuelle Layer mit Sci-Fi Ästhetik" },
-      { "en": "60-second deep scan in 6 phases", "de": "60-Sekunden Deep Scan in 6 Phasen" },
-      { "en": "Progressive data reveal (terrain, chemistry, bio-markers, anomalies)", "de": "Progressive Daten-Enthüllung (Terrain, Chemie, Bio-Marker, Anomalien)" },
-      { "en": "Deterministic output based on tap coordinates", "de": "Deterministische Ausgabe basierend auf Tap-Koordinaten" },
-      { "en": "Auto-scan mode with automatic contact generation", "de": "Auto-Scan Mode mit automatischer Kontakt-Generierung" },
-      { "en": "6 color schemes: Red, Green, Blue, Amber, Cyan, Mono", "de": "6 Farbschemas: Red, Green, Blue, Amber, Cyan, Mono" },
-      { "en": "Animated live wallpaper (30 FPS)", "de": "Animiertes Live Wallpaper (30 FPS)" },
-      { "en": "Sound effects and haptic feedback", "de": "Sound-Effekte und haptisches Feedback" }
+      {
+        "en": "17+ visual layers with sci-fi aesthetics",
+        "de": "17+ visuelle Layer mit Sci-Fi Ästhetik"
+      },
+      {
+        "en": "60-second deep scan in 6 phases",
+        "de": "60-Sekunden Deep Scan in 6 Phasen"
+      },
+      {
+        "en": "Progressive data reveal (terrain, chemistry, bio-markers, anomalies)",
+        "de": "Progressive Daten-Enthüllung (Terrain, Chemie, Bio-Marker, Anomalien)"
+      },
+      {
+        "en": "Deterministic output based on tap coordinates",
+        "de": "Deterministische Ausgabe basierend auf Tap-Koordinaten"
+      },
+      {
+        "en": "Auto-scan mode with automatic contact generation",
+        "de": "Auto-Scan Mode mit automatischer Kontakt-Generierung"
+      },
+      {
+        "en": "6 color schemes: Red, Green, Blue, Amber, Cyan, Mono",
+        "de": "6 Farbschemas: Red, Green, Blue, Amber, Cyan, Mono"
+      },
+      {
+        "en": "Animated live wallpaper (30 FPS)",
+        "de": "Animiertes Live Wallpaper (30 FPS)"
+      },
+      {
+        "en": "Sound effects and haptic feedback",
+        "de": "Sound-Effekte und haptisches Feedback"
+      }
     ],
     "howToUse": [
-      { "en": "App starts directly in Show Mode", "de": "App startet direkt im Show Mode" },
-      { "en": "Tap anywhere to start 60-sec deep scan", "de": "Tippe irgendwo um 60-Sek Deep Scan zu starten" },
-      { "en": "Watch the progressive technical readouts", "de": "Beobachte die progressiven technischen Readouts" },
-      { "en": "Tap again = Start new scan (old one is cancelled)", "de": "Erneut tippen = Neuen Scan starten (alter wird abgebrochen)" },
-      { "en": "[X] button top left = Main menu", "de": "[X] Button oben links = Hauptmenü" },
-      { "en": "Settings: Adjust color, speed, sounds, auto-scan", "de": "Settings: Farbe, Geschwindigkeit, Sounds, Auto-Scan anpassen" }
+      {
+        "en": "App starts directly in Show Mode",
+        "de": "App startet direkt im Show Mode"
+      },
+      {
+        "en": "Tap anywhere to start 60-sec deep scan",
+        "de": "Tippe irgendwo um 60-Sek Deep Scan zu starten"
+      },
+      {
+        "en": "Watch the progressive technical readouts",
+        "de": "Beobachte die progressiven technischen Readouts"
+      },
+      {
+        "en": "Tap again = Start new scan (old one is cancelled)",
+        "de": "Erneut tippen = Neuen Scan starten (alter wird abgebrochen)"
+      },
+      {
+        "en": "[X] button top left = Main menu",
+        "de": "[X] Button oben links = Hauptmenü"
+      },
+      {
+        "en": "Settings: Adjust color, speed, sounds, auto-scan",
+        "de": "Settings: Farbe, Geschwindigkeit, Sounds, Auto-Scan anpassen"
+      }
     ],
     "youtube": "BUdlt3MCnNo",
     "download": {
@@ -250,7 +494,10 @@
       "en": "Completely offline, no real scan functionality",
       "de": "Komplett offline, keine echte Scan-Funktionalität"
     },
-    "permissions": ["WAKE_LOCK", "VIBRATE"]
+    "permissions": [
+      "WAKE_LOCK",
+      "VIBRATE"
+    ]
   },
   {
     "id": "rain-charge",
@@ -260,19 +507,26 @@
       "de": "Animierte Ladebildschirme"
     },
     "status": "stable",
-    "tags": ["charging", "animation", "matrix", "fantasy", "cyberpunk"],
+    "tags": [
+      "charging",
+      "animation",
+      "matrix",
+      "fantasy",
+      "cyberpunk",
+      "sci-fi"
+    ],
     "shortDescription": {
-      "en": "Replaces the plain charging screen with seven full-screen animations that show the real battery level: digital rain, a tactical terminal, a neon tower, a magic book, a glowing rune, a sword in the stone and a helmet HUD.",
-      "de": "Ersetzt den schlichten Ladebildschirm durch sieben Vollbild-Animationen, die den echten Akkustand zeigen: digitaler Regen, taktisches Terminal, Neon-Hochhaus, magisches Buch, leuchtende Rune, Schwert im Stein und Helm-HUD."
+      "en": "Replaces the plain charging screen with eight full-screen animations that show the real battery level: digital rain, a tactical terminal, a neon tower, a magic book, a glowing rune, a sword in the stone, a helmet HUD and a starship console.",
+      "de": "Ersetzt den schlichten Ladebildschirm durch acht Vollbild-Animationen, die den echten Akkustand zeigen: digitaler Regen, taktisches Terminal, Neon-Hochhaus, magisches Buch, leuchtende Rune, Schwert im Stein, Helm-HUD und Raumschiff-Konsole."
     },
     "longDescription": {
-      "en": "Rain Charge shows a full-screen animation as soon as you plug in the charging cable, also over the lock screen. Every animation is a charge display in its own right: the rain fills the screen from the bottom, the tower lights up floor by floor, the book turns one page per percent, the rune fills with blue energy, the sword charges from the stone upwards, the helmet HUD recharges its shield. Pick your favourite in the app; a tap closes the animation.",
-      "de": "Rain Charge zeigt eine Vollbild-Animation, sobald du das Ladekabel einsteckst, auch über dem Sperrbildschirm. Jede Animation ist selbst die Ladeanzeige: Der Regen füllt den Bildschirm von unten, das Hochhaus leuchtet Stockwerk für Stockwerk auf, das Buch blättert pro Prozent eine Seite um, die Rune füllt sich mit blauer Energie, das Schwert lädt sich vom Stein aus auf, das Helm-HUD lädt seinen Schild. Den Favoriten wählst du in der App; ein Tippen schließt die Animation."
+      "en": "Rain Charge shows a full-screen animation as soon as you plug in the charging cable, also over the lock screen. Every animation is a charge display in its own right: the rain fills the screen from the bottom, the tower lights up floor by floor, the book turns one page per percent, the rune fills with blue energy, the sword charges from the stone upwards, the helmet HUD recharges its shield, the starship console fills its energy ring. Pick your favourite in the app; a tap closes the animation. An options tab sets how the animations behave, in English or German.",
+      "de": "Rain Charge zeigt eine Vollbild-Animation, sobald du das Ladekabel einsteckst, auch über dem Sperrbildschirm. Jede Animation ist selbst die Ladeanzeige: Der Regen füllt den Bildschirm von unten, das Hochhaus leuchtet Stockwerk für Stockwerk auf, das Buch blättert pro Prozent eine Seite um, die Rune füllt sich mit blauer Energie, das Schwert lädt sich vom Stein aus auf, das Helm-HUD lädt seinen Schild, die Raumschiff-Konsole füllt ihren Energiering. Den Favoriten wählst du in der App; ein Tippen schließt die Animation. Ein Options-Tab legt fest, wie sich die Animationen verhalten, auf Deutsch oder Englisch."
     },
     "features": [
       {
-        "en": "7 animations: Digital Rain, Nod Tactical Power Interface, Arasaka Tower, The Magic Book, Algiz Rune, The Magic Sword, Spartan Energy HUD",
-        "de": "7 Animationen: Digitaler Regen, Nod Tactical Power Interface, Arasaka-Hochhaus, Das magische Buch, Algiz-Rune, Das magische Schwert, Spartan Energy HUD"
+        "en": "8 animations: Digital Rain, Nod Tactical Power Interface, Arasaka Tower, The Magic Book, Algiz Rune, The Magic Sword, Spartan Energy HUD, LCARS Energy Systems",
+        "de": "8 Animationen: Digitaler Regen, Nod Tactical Power Interface, Arasaka-Hochhaus, Das magische Buch, Algiz-Rune, Das magische Schwert, Spartan Energy HUD, LCARS Energiesysteme"
       },
       {
         "en": "Every animation shows the real battery level",
@@ -295,6 +549,10 @@
         "de": "Spartan Energy HUD: Schildbalken, Ring und Zahl zeigen die Ladung im Helmvisier"
       },
       {
+        "en": "LCARS Energy Systems: shield bar, energy ring and progress bar on a starship console",
+        "de": "LCARS Energiesysteme: Schildbalken, Energiering und Ladebalken auf einer Raumschiff-Konsole"
+      },
+      {
         "en": "Demo mode: watch any animation run from 0 to 100 %",
         "de": "Demo-Modus: jede Animation im Durchlauf von 0 bis 100 % ansehen"
       },
@@ -311,20 +569,48 @@
         "de": "Daueranzeige: jede Animation als digitales Bild mit frei wählbarem Ladestand"
       },
       {
-        "en": "Live wallpaper: the chosen animation runs behind your home screen with the real battery level",
-        "de": "Live-Hintergrund: Die gewählte Animation läuft hinter dem Startbildschirm, mit echtem Akkustand"
+        "en": "Live wallpaper: the chosen animation runs behind your home screen with the real battery level; optionally darkened, or still unless charging",
+        "de": "Live-Hintergrund: Die gewählte Animation läuft hinter dem Startbildschirm, mit echtem Akkustand; wahlweise abgedunkelt oder als Standbild, solange nicht geladen wird"
       },
       {
         "en": "Option: the animation comes back every time you wake the screen, until you tap it away",
         "de": "Option: Die Animation ist nach jedem Aufwecken wieder da, bis du sie wegtippst"
       },
       {
+        "en": "Changing animations: a different one each time you plug in, in turn or at random",
+        "de": "Motivwechsel: bei jedem Einstecken ein anderes Motiv, der Reihe nach oder zufällig"
+      },
+      {
+        "en": "Charge target: notification, sound and vibration at 80, 85, 90 or 100 %",
+        "de": "Ladeziel: Benachrichtigung, Ton und Vibration bei 80, 85, 90 oder 100 %"
+      },
+      {
+        "en": "Charge report after unplugging: how much, how long, average watts",
+        "de": "Ladebericht nach dem Abziehen: wie viel, wie lange, mittlere Leistung"
+      },
+      {
+        "en": "Quiet hours: dimmed and silent, or no animation at all",
+        "de": "Nachtruhe: dunkel und stumm oder gar keine Animation"
+      },
+      {
+        "en": "Optional clock in the animation, burn-in protection for the permanent display",
+        "de": "Uhrzeit in der Animation zuschaltbar, Einbrennschutz für die Daueranzeige"
+      },
+      {
+        "en": "Home screen widget with the battery level",
+        "de": "Widget für den Startbildschirm mit dem Akkustand"
+      },
+      {
+        "en": "Menu in English and German",
+        "de": "Menü auf Deutsch und Englisch"
+      },
+      {
         "en": "Portrait and landscape, on phones and tablets",
         "de": "Hochkant und quer, auf Handy und Tablet"
       },
       {
-        "en": "Runs on Android 8.0 and newer",
-        "de": "Läuft ab Android 8.0"
+        "en": "Runs on Android 12 and newer",
+        "de": "Läuft ab Android 12"
       },
       {
         "en": "No internet access, no ads, no data collection",
@@ -345,8 +631,8 @@
         "de": "Bleibt der Schalter grau (Pixel und andere): App-Info öffnen, drei Punkte antippen, eingeschränkte Einstellungen zulassen, dann erneut versuchen"
       },
       {
-        "en": "Choose an animation and how long the screen stays on",
-        "de": "Animation und Anzeigedauer wählen"
+        "en": "Tab \"Animation\": choose an animation. Tab \"Options\": screen-on time, signals, quiet hours, language and more",
+        "de": "Tab „Animation“: Motiv wählen. Tab „Optionen“: Anzeigedauer, Signale, Nachtruhe, Sprache und mehr"
       },
       {
         "en": "Try \"Preview\" or \"Demo\", then plug in the cable",
@@ -368,16 +654,23 @@
     "download": {
       "type": "external",
       "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/rain-charge.apk",
-      "version": "0.7.1"
+      "version": "0.9"
     },
     "credits": {
       "en": "Inspired by sci-fi and fantasy classics",
       "de": "Inspiriert von Sci-Fi- und Fantasy-Klassikern"
     },
     "disclaimerNotes": {
-      "en": "Not an official product, pure fan project. Test build for friends: Samsung's own charging animation still flashes briefly before this one, and the menu is in German only.",
-      "de": "Kein offizielles Produkt, reines Fan-Projekt. Testversion für Freunde: Die Samsung-eigene Lade-Animation blitzt weiterhin kurz vorher auf, das Menü ist nur auf Deutsch."
+      "en": "Not an official product, pure fan project. Test build for friends: Samsung's own charging animation still flashes briefly before this one. Devices older than Android 12 are no longer supported.",
+      "de": "Kein offizielles Produkt, reines Fan-Projekt. Testversion für Freunde: Die Samsung-eigene Lade-Animation blitzt weiterhin kurz vorher auf. Geräte mit Android älter als 12 werden nicht mehr unterstützt."
     },
-    "permissions": ["SYSTEM_ALERT_WINDOW", "FOREGROUND_SERVICE", "RECEIVE_BOOT_COMPLETED", "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS", "POST_NOTIFICATIONS"]
+    "permissions": [
+      "SYSTEM_ALERT_WINDOW",
+      "FOREGROUND_SERVICE",
+      "RECEIVE_BOOT_COMPLETED",
+      "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+      "POST_NOTIFICATIONS",
+      "VIBRATE"
+    ]
   }
 ]
