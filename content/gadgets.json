@@ -627,8 +627,8 @@
         "de": "Beide Statuszeilen antippen, bis sie einen grünen Haken zeigen: „Über anderen Apps einblenden“ und die Ausnahme von der Akku-Optimierung"
       },
       {
-        "en": "If the switch stays grey (Pixel and others): open the app info, tap the three dots, allow restricted settings, then try again",
-        "de": "Bleibt der Schalter grau (Pixel und andere): App-Info öffnen, drei Punkte antippen, eingeschränkte Einstellungen zulassen, dann erneut versuchen"
+        "en": "If the switch stays grey: tap the help button that appears below the red status line; it lists the steps and opens the right settings pages",
+        "de": "Bleibt der Schalter grau: den Hilfe-Knopf antippen, der unter der roten Statuszeile erscheint; er nennt die Schritte und öffnet die passenden Einstellungsseiten"
       },
       {
         "en": "Tab \"Animation\": choose an animation. Tab \"Options\": screen-on time, signals, quiet hours, language and more",
@@ -654,7 +654,7 @@
     "download": {
       "type": "external",
       "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/rain-charge.apk",
-      "version": "0.9"
+      "version": "0.9.1"
     },
     "credits": {
       "en": "Inspired by sci-fi and fantasy classics",
