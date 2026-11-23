@@ -311,6 +311,14 @@
         "de": "Daueranzeige: jede Animation als digitales Bild mit frei wählbarem Ladestand"
       },
       {
+        "en": "Live wallpaper: the chosen animation runs behind your home screen with the real battery level",
+        "de": "Live-Hintergrund: Die gewählte Animation läuft hinter dem Startbildschirm, mit echtem Akkustand"
+      },
+      {
+        "en": "Option: the animation comes back every time you wake the screen, until you tap it away",
+        "de": "Option: Die Animation ist nach jedem Aufwecken wieder da, bis du sie wegtippst"
+      },
+      {
         "en": "Portrait and landscape, on phones and tablets",
         "de": "Hochkant und quer, auf Handy und Tablet"
       },
@@ -349,6 +357,10 @@
         "de": "Daueranzeige: dritten Knopf antippen, Ladestand wählen; „Zurück“ beendet sie"
       },
       {
+        "en": "Live wallpaper: tap the fourth button and confirm on the system page; switch it off by choosing another wallpaper",
+        "de": "Live-Hintergrund: vierten Knopf antippen und auf der Systemseite bestätigen; abschalten, indem du einen anderen Hintergrund wählst"
+      },
+      {
         "en": "Tap the animation to close it",
         "de": "Animation antippen, um sie zu schließen"
       }
@@ -356,7 +368,7 @@
     "download": {
       "type": "external",
       "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/rain-charge.apk",
-      "version": "0.5"
+      "version": "0.7"
     },
     "credits": {
       "en": "Inspired by sci-fi and fantasy classics",
