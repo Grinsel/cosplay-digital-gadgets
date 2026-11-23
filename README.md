@@ -28,7 +28,7 @@ Weitere Dokumente: `HANDOVER.md` (Verlauf und Hosting-Details aus dem Februar 20
 | `nod-ops-device` | NOD OPS Field Device | 1.0 |
 | `predator-countdown` | Predator Countdown | 1.0 |
 | `tactical-scanner` | Tactical Scanner | 2.0 |
-| `rain-charge` | Rain Charge (animierte Ladebildschirme) | 0.7 |
+| `rain-charge` | Rain Charge (animierte Ladebildschirme) | 0.7.1 |
 
 Rain Charge hat als einzige App noch kein Video. Ihr Quelltext liegt in
 `C:\Users\marcj\git10\rain_charge` (eigene `README.md`).
@@ -64,7 +64,9 @@ Der Ordner `public/apks/` (mit s) ist leer und wird nicht benutzt.
 
 ## Eine App aktualisieren
 
-1. Die neue APK nach `public/apk/<id>.apk` kopieren. Sie überschreibt die alte; es wird immer nur
+1. Die APK vorher komplett neu bauen (bei Rain Charge: `gradlew.bat clean assembleDebug`, dann
+   `tools\check_apk.py`); schrittweise gebaute Dateien ließen sich auf einem Galaxy S7 edge
+   nicht installieren. Dann die neue APK nach `public/apk/<id>.apk` kopieren. Sie überschreibt die alte; es wird immer nur
    eine Version angeboten.
 2. In `content/gadgets.json` beim Eintrag die `download.version` hochsetzen und bei Bedarf
    `features` und `howToUse` anpassen (immer `de` und `en`).

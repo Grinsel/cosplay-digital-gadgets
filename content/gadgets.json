@@ -368,7 +368,7 @@
     "download": {
       "type": "external",
       "apkUrl": "https://github.com/Grinsel/cosplay-digital-gadgets/raw/master/public/apk/rain-charge.apk",
-      "version": "0.7"
+      "version": "0.7.1"
     },
     "credits": {
       "en": "Inspired by sci-fi and fantasy classics",
